@@ -1,0 +1,3791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Town's Heart - Luxury Restaurant & Hotel | Fine Dining & Kitty Party Banquets</title>
+  <meta name="description" content="Town's Heart Restaurant & Hotel. Savor authentic Biryani, Tandoori delicacies, Lamb Champ, Chinese favorites, and our dedicated kitty party celebration hall. Call 09888326005.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E<text y=%2226%22 font-size=%2224%22>👑</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External Fallback Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Embedded Self-Contained Luxury Stylesheet (Guarantees colors, dark mode & layout work everywhere) -->
+  <style>
+    :root {
+      --bg-primary: #0a0b0d;
+      --bg-secondary: #111317;
+      --bg-card: rgba(22, 25, 31, 0.75);
+      --bg-card-hover: rgba(30, 34, 43, 0.9);
+      --bg-glass: rgba(18, 20, 26, 0.82);
+
+      --accent-primary: #f26522;
+      --accent-hover: #ff7d3b;
+      --accent-glow: rgba(242, 101, 34, 0.35);
+      --accent-secondary: #e5a93c;
+      --accent-gradient: linear-gradient(135deg, #f26522 0%, #ff8a43 50%, #e5a93c 100%);
+      --accent-gradient-text: linear-gradient(135deg, #ff7a2f 0%, #f26522 60%, #e09830 100%);
+
+      --text-primary: #ffffff;
+      --text-secondary: #cfd4dc;
+      --text-muted: #8c93a3;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(242, 101, 34, 0.4);
+
+      --veg-color: #2e7d32;
+      --veg-bg: rgba(46, 125, 50, 0.15);
+      --nonveg-color: #d32f2f;
+      --nonveg-bg: rgba(211, 47, 47, 0.15);
+
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+      --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 32px;
+      --radius-pill: 9999px;
+
+      --shadow-card: 0 16px 36px -12px rgba(0, 0, 0, 0.6);
+      --shadow-glow: 0 10px 30px -5px rgba(242, 101, 34, 0.4);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient Lighting Background */
+    .bg-ambient {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .ambient-glow-1 {
+      position: absolute;
+      top: -15%;
+      right: -10%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(242, 101, 34, 0.12) 0%, transparent 65%);
+      filter: blur(80px);
+    }
+
+    .ambient-glow-2 {
+      position: absolute;
+      top: 45%;
+      left: -15%;
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(229, 169, 60, 0.08) 0%, transparent 70%);
+      filter: blur(90px);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.25;
+    }
+
+    .gradient-text {
+      background: var(--accent-gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-secondary);
+      margin-bottom: 12px;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: var(--accent-secondary);
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 13px 26px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all var(--transition-smooth);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #ffffff;
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px -4px rgba(242, 101, 34, 0.55);
+      background: linear-gradient(135deg, #ff742d 0%, #ff9554 100%);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .btn-call {
+      background: rgba(242, 101, 34, 0.15);
+      color: #ff9154;
+      border: 1px solid rgba(242, 101, 34, 0.35);
+    }
+
+    .btn-call:hover {
+      background: var(--accent-gradient);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: var(--shadow-glow);
+      transform: translateY(-2px);
+    }
+
+    .btn-icon-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.25);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      transition: transform var(--transition-fast);
+    }
+
+    .btn:hover .btn-icon-circle {
+      transform: translateX(3px) rotate(-35deg);
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: var(--bg-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-color);
+      transition: all var(--transition-smooth);
+    }
+
+    .site-header.scrolled {
+      background: rgba(10, 11, 13, 0.95);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #ffffff;
+    }
+
+    .brand-tagline {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--accent-secondary);
+      margin-top: -2px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-link {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      position: relative;
+      transition: color var(--transition-fast);
+      padding: 6px 0;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #ffffff;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--accent-gradient);
+      transition: width var(--transition-smooth);
+    }
+
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-toggle-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: #ffffff;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 1.3rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      padding: 60px 0 90px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(242, 101, 34, 0.12);
+      border: 1px solid rgba(242, 101, 34, 0.28);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #ff9d66;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.6rem, 5vw, 4.4rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 22px;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 530px;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .hero-features-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-card);
+      max-width: 480px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .feature-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .feature-item:first-child {
+      padding-top: 0;
+    }
+
+    .feature-icon-wrapper {
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    .feature-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+
+    .feature-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Hero Media */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-plate-container {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 1/1;
+    }
+
+    .hero-plate-glow {
+      position: absolute;
+      inset: -8%;
+      background: radial-gradient(circle, rgba(242, 101, 34, 0.28) 0%, transparent 65%);
+      filter: blur(40px);
+      z-index: 0;
+      animation: pulse-glow 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse-glow {
+      0% { transform: scale(0.95); opacity: 0.7; }
+      100% { transform: scale(1.06); opacity: 1; }
+    }
+
+    .hero-plate-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 0 2px rgba(255, 255, 255, 0.08);
+      background: #191c22;
+    }
+
+    .hero-doodle-tag {
+      position: absolute;
+      top: 15px;
+      left: -20px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--accent-secondary);
+    }
+
+    .doodle-arrow {
+      width: 48px;
+      height: 32px;
+      stroke: var(--accent-secondary);
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .hero-floating-pill {
+      position: absolute;
+      bottom: 25px;
+      right: -10px;
+      z-index: 3;
+      background: rgba(18, 20, 26, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-card);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .floating-pill-stars {
+      color: #ffb703;
+      font-size: 0.9rem;
+    }
+
+    .floating-pill-text {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .floating-pill-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Culinary Showcase */
+    .culinary-showcase-section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-header-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .showcase-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 24px 20px 28px;
+      text-align: center;
+      transition: all var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .showcase-card:hover {
+      transform: translateY(-8px);
+      background: var(--bg-card-hover);
+      border-color: rgba(242, 101, 34, 0.3);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7);
+    }
+
+    .showcase-plate-frame {
+      width: 220px;
+      height: 220px;
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .showcase-plate-glow {
+      position: absolute;
+      inset: -5%;
+      background: radial-gradient(circle, rgba(242, 101, 34, 0.22) 0%, transparent 65%);
+      filter: blur(20px);
+    }
+
+    .showcase-plate-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 0 2px rgba(255, 255, 255, 0.08);
+      background: #191c22;
+    }
+
+    .showcase-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-secondary);
+      margin-bottom: 8px;
+    }
+
+    .showcase-title {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+
+    .showcase-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      max-width: 280px;
+    }
+
+    .showcase-meta {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .showcase-price {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    /* Celebration & Kitty Hall */
+    .hotel-stay-section {
+      padding: 90px 0;
+      position: relative;
+      background: linear-gradient(180deg, transparent 0%, rgba(17, 19, 23, 0.7) 50%, transparent 100%);
+    }
+
+    .hotel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+      margin-top: 48px;
+    }
+
+    .celebration-detail-card {
+      padding: 38px 32px;
+      background: linear-gradient(180deg, rgba(22, 25, 32, 0.9) 0%, rgba(14, 16, 20, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: var(--radius-xl);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-smooth);
+    }
+
+    .celebration-detail-card:hover {
+      border-color: rgba(242, 101, 34, 0.4);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+    }
+
+    .celebration-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hotel-card-badge {
+      background: rgba(242, 101, 34, 0.12);
+      border: 1px solid rgba(242, 101, 34, 0.3);
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hotel-card-title {
+      font-size: 1.55rem;
+      margin-bottom: 12px;
+    }
+
+    .hotel-card-rate {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+    }
+
+    .hotel-card-rate span {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .hotel-features-list {
+      list-style: none;
+      margin: 20px 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hotel-feature-point {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hotel-feature-point::before {
+      content: '✓';
+      color: var(--accent-primary);
+      font-weight: 700;
+    }
+
+    .hotel-card-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* Grand Menu Section */
+    .menu-section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .menu-search-filter-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .menu-search-box {
+      position: relative;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .menu-search-input {
+      width: 100%;
+      background: rgba(10, 11, 13, 0.7);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-pill);
+      padding: 12px 20px 12px 44px;
+      color: #ffffff;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      outline: none;
+      transition: all var(--transition-fast);
+    }
+
+    .menu-search-input:focus {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .dietary-filters {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all var(--transition-fast);
+    }
+
+    .filter-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .filter-btn.active {
+      background: var(--accent-gradient);
+      border-color: transparent;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(242, 101, 34, 0.35);
+    }
+
+    .menu-categories-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px 4px 24px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+    }
+
+    .category-tab {
+      background: rgba(20, 23, 29, 0.85);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-sans);
+      font-size: 0.86rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all var(--transition-smooth);
+    }
+
+    .category-tab:hover {
+      background: rgba(30, 34, 43, 0.95);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .category-tab.active {
+      background: var(--accent-gradient);
+      border-color: transparent;
+      color: #ffffff;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(242, 101, 34, 0.4);
+    }
+
+    .menu-items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 22px;
+    }
+
+    .menu-item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-smooth);
+    }
+
+    .menu-item-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(242, 101, 34, 0.35);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.7);
+    }
+
+    .menu-item-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .menu-item-name-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .diet-indicator {
+      width: 18px;
+      height: 18px;
+      border: 1.5px solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .diet-indicator.veg {
+      border-color: var(--veg-color);
+    }
+
+    .diet-indicator.veg::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--veg-color);
+    }
+
+    .diet-indicator.nonveg {
+      border-color: var(--nonveg-color);
+    }
+
+    .diet-indicator.nonveg::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 8px solid var(--nonveg-color);
+    }
+
+    .menu-item-name {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .menu-item-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      background: rgba(229, 169, 60, 0.15);
+      color: #f7b731;
+      border: 1px solid rgba(229, 169, 60, 0.3);
+      white-space: nowrap;
+    }
+
+    .menu-item-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .menu-item-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .menu-item-price {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .add-to-order-btn {
+      background: rgba(242, 101, 34, 0.15);
+      border: 1px solid rgba(242, 101, 34, 0.35);
+      color: #ff9154;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .add-to-order-btn:hover {
+      background: var(--accent-gradient);
+      border-color: transparent;
+      color: #ffffff;
+    }
+
+    .item-qty-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(242, 101, 34, 0.2);
+      border: 1px solid rgba(242, 101, 34, 0.4);
+      border-radius: var(--radius-pill);
+      padding: 2px 8px;
+    }
+
+    .qty-btn {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 2px 6px;
+    }
+
+    .qty-count {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #ffffff;
+      min-width: 16px;
+      text-align: center;
+    }
+
+    /* Team / Staff Section */
+    .experts-section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .experts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 48px;
+    }
+
+    .expert-card.no-photo {
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(24, 27, 34, 0.85) 0%, rgba(16, 18, 23, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-xl);
+      transition: all var(--transition-smooth);
+    }
+
+    .expert-card.no-photo:hover {
+      transform: translateY(-6px);
+      border-color: rgba(242, 101, 34, 0.35);
+      box-shadow: var(--shadow-card);
+    }
+
+    .expert-icon-badge {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(242, 101, 34, 0.12);
+      border: 1.5px solid rgba(242, 101, 34, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 24px rgba(242, 101, 34, 0.2);
+      transition: transform var(--transition-smooth);
+    }
+
+    .expert-card.no-photo:hover .expert-icon-badge {
+      transform: scale(1.1) rotate(5deg);
+      background: var(--accent-gradient);
+    }
+
+    .expert-name {
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+    }
+
+    .expert-role {
+      font-size: 0.82rem;
+      color: var(--accent-secondary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .expert-bio {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .expert-feature-tags {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      margin-top: auto;
+      text-align: left;
+    }
+
+    .expert-feature-tags li {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .expert-feature-tags li span {
+      color: var(--accent-primary);
+      font-weight: 700;
+    }
+
+    /* Google Reviews Section */
+    .reviews-section {
+      padding: 90px 0;
+      position: relative;
+      background: linear-gradient(180deg, transparent 0%, rgba(18, 20, 26, 0.8) 50%, transparent 100%);
+    }
+
+    .google-summary-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 28px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .rating-score-block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .rating-number {
+      font-family: var(--font-serif);
+      font-size: 3.8rem;
+      font-weight: 700;
+      line-height: 1;
+      color: #ffffff;
+    }
+
+    .stars-row {
+      color: #fbbc04;
+      font-size: 1.35rem;
+      letter-spacing: 2px;
+    }
+
+    .review-count-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .review-tags-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      max-width: 600px;
+    }
+
+    .review-tag-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .review-tag-pill span {
+      color: var(--accent-primary);
+      font-weight: 600;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-smooth);
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: var(--shadow-card);
+    }
+
+    .review-user-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .review-avatar-initial {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #ffffff;
+    }
+
+    .review-avatar-initial.alt {
+      background: linear-gradient(135deg, #e91e63 0%, #880e4f 100%);
+    }
+
+    .review-avatar-initial.alt-2 {
+      background: linear-gradient(135deg, #43a047 0%, #1b5e20 100%);
+    }
+
+    .review-user-name {
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .review-user-badge {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+
+    .review-stars-time {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .review-stars {
+      color: #fbbc04;
+      font-size: 0.95rem;
+    }
+
+    .review-time {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .review-context-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--accent-secondary);
+      background: rgba(229, 169, 60, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+
+    .review-text {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      font-style: italic;
+    }
+
+    /* Reservation Section */
+    .reservation-section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .reservation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 48px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .reservation-visual {
+      position: relative;
+      height: 100%;
+      min-height: 480px;
+      background: #151820;
+    }
+
+    .reservation-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .reservation-visual-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 11, 13, 0.2) 0%, rgba(10, 11, 13, 0.85) 100%);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .overlay-quote {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .overlay-sub {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .reservation-form-wrapper {
+      padding: 48px 40px;
+    }
+
+    .form-header {
+      margin-bottom: 28px;
+    }
+
+    .form-title {
+      font-size: 1.85rem;
+      margin-bottom: 8px;
+    }
+
+    .form-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .reservation-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-control {
+      background: rgba(10, 11, 13, 0.8);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      color: #ffffff;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      outline: none;
+      transition: all var(--transition-fast);
+    }
+
+    .form-control:focus {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .form-control option {
+      background: #16181f;
+      color: #ffffff;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #08090b;
+      border-top: 1px solid var(--border-color);
+      padding: 80px 0 30px;
+      position: relative;
+    }
+
+    .footer-top-banner {
+      background: linear-gradient(135deg, rgba(242, 101, 34, 0.15) 0%, rgba(229, 169, 60, 0.08) 100%);
+      border: 1px solid rgba(242, 101, 34, 0.3);
+      border-radius: var(--radius-xl);
+      padding: 36px 40px;
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .banner-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+    }
+
+    .banner-content p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .banner-phone-link {
+      font-family: var(--font-sans);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--accent-gradient);
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-glow);
+      transition: all var(--transition-smooth);
+    }
+
+    .banner-phone-link:hover {
+      transform: scale(1.03);
+      box-shadow: 0 16px 36px rgba(242, 101, 34, 0.5);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-link:hover {
+      color: var(--accent-primary);
+    }
+
+    .contact-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .contact-icon {
+      color: var(--accent-primary);
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Floating Quick Action */
+    .floating-call-btn {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 98;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent-gradient);
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 25px rgba(242, 101, 34, 0.5);
+      transition: all var(--transition-smooth);
+    }
+
+    .order-tray-bar {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 99;
+      background: var(--bg-card-hover);
+      border: 1px solid var(--accent-primary);
+      border-radius: var(--radius-pill);
+      padding: 10px 22px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), var(--shadow-glow);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      backdrop-filter: blur(20px);
+      transform: translateY(120%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all var(--transition-smooth);
+    }
+
+    .order-tray-bar.visible {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .tray-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tray-count {
+      font-size: 0.82rem;
+      color: var(--accent-secondary);
+      font-weight: 600;
+    }
+
+    .tray-total {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    /* Modals */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-smooth);
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-content {
+      background: #14161c;
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xl);
+      max-width: 500px;
+      width: 100%;
+      padding: 36px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+      text-align: center;
+      transform: translateY(20px);
+      transition: transform var(--transition-smooth);
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: translateY(0);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: #ffffff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .hero-description { margin-left: auto; margin-right: auto; }
+      .hero-buttons { justify-content: center; }
+      .hero-features-card { margin: 0 auto; text-align: left; }
+      .showcase-grid, .reviews-grid, .experts-grid { grid-template-columns: repeat(2, 1fr); }
+      .hotel-grid { grid-template-columns: 1fr; }
+      .reservation-grid { grid-template-columns: 1fr; }
+      .reservation-visual { min-height: 280px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .header-inner { height: 70px; }
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0f1115;
+        flex-direction: column;
+        padding: 24px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+        gap: 16px;
+      }
+      .main-nav.open { display: flex; }
+      .nav-toggle-btn { display: block; }
+      .header-actions .btn-call { display: none; }
+      .showcase-grid, .reviews-grid, .experts-grid { grid-template-columns: 1fr; }
+      .form-row-2 { grid-template-columns: 1fr; }
+      .footer-top-banner { flex-direction: column; text-align: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .reservation-form-wrapper { padding: 30px 20px; }
+      .floating-call-btn { bottom: 80px; left: 16px; padding: 10px 16px; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-logo" aria-label="Town's Heart Home">
+        <span class="brand-title">Town's Heart</span>
+        <span class="brand-tagline">Restaurant &bull; Hotel &bull; Banquets</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#culinary" class="nav-link">Specialties</a>
+        <a href="#kitty-hall" class="nav-link">Kitty Hall & Events</a>
+        <a href="#menu" class="nav-link">Grand Menu</a>
+        <a href="#experts" class="nav-link">Our Staff</a>
+        <a href="#reviews" class="nav-link">Reviews (4.3★)</a>
+        <a href="#reservation" class="nav-link">Reservations</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:09888326005" class="btn btn-call" title="Call Town's Heart">
+          <span>📞 09888326005</span>
+        </a>
+        <a href="#reservation" class="btn btn-primary">
+          <span>Book Now</span>
+          <span class="btn-icon-circle">↗</span>
+        </a>
+        <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle navigation menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>✨ Fine Dining & Exclusive Kitty Party Hall</span>
+          </div>
+
+          <h1 class="hero-title">
+            Savor Every Moment with <span class="gradient-text">Every Bite</span>
+          </h1>
+
+          <p class="hero-description">
+            Experience gourmet dining crafted with royal passion, authentic Punjabi tandoori flavors, slow-cooked lamb champ, fresh Chinese wok favorites, and peaceful celebration halls in the heart of town.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#reservation" class="btn btn-primary">
+              <span>Reserve Your Table</span>
+              <span class="btn-icon-circle">↗</span>
+            </a>
+            <a href="tel:09888326005" class="btn btn-secondary">
+              <span>📞 Call 09888326005</span>
+            </a>
+            <a href="#menu" class="btn btn-secondary">
+              <span>View Full Menu</span>
+            </a>
+          </div>
+
+          <!-- Hero Features Card -->
+          <div class="hero-features-card">
+            <div class="feature-item">
+              <div class="feature-icon-wrapper">⭐</div>
+              <div>
+                <h4 class="feature-title">Special Events & Kitty Parties</h4>
+                <p class="feature-desc">Dedicated banquet halls, elegant floral decor & custom catering</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-wrapper">👨‍🍳</div>
+              <div>
+                <h4 class="feature-title">Chef's Master Experience</h4>
+                <p class="feature-desc">Authentic Dum Biryani, Lamb Champ, and Town's Heart Special recipes</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-wrapper">🍗</div>
+              <div>
+                <h4 class="feature-title">Signature Tandoori Wings & Kebabs</h4>
+                <p class="feature-desc">Crispy, juicy chicken skewers glazed with toasted sesame and royal spices</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual -->
+        <div class="hero-visual">
+          <div class="hero-plate-container">
+            <div class="hero-plate-glow"></div>
+            
+            <div class="hero-doodle-tag">
+              <svg class="doodle-arrow" viewBox="0 0 50 30">
+                <path d="M 5,20 Q 25,5 42,12" stroke="currentColor" fill="none" />
+                <path d="M 35,6 L 44,12 L 36,18" stroke="currentColor" fill="none" />
+              </svg>
+              <span>Chef's Signature Dish</span>
+            </div>
+
+            <img src="./hero-dish.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./assets/images/hero-dish.jpg';}" alt="Town's Heart Gourmet Sesame Glazed Chicken Wings" class="hero-plate-img">
+
+            <div class="hero-floating-pill">
+              <div class="floating-pill-stars">★★★★★</div>
+              <div>
+                <div class="floating-pill-text">4.3 Rating (535+ Reviews)</div>
+                <div class="floating-pill-sub">Top Rated Family Restaurant & Banquets</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Indulge in Culinary Artistry Section -->
+    <section class="culinary-showcase-section" id="culinary">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-label">Culinary Excellence</span>
+            <h2 class="section-title">Indulge in Culinary Artistry</h2>
+          </div>
+          <p class="section-subtitle">
+            Explore our finest culinary selections, crafted to perfection with rich spices, fresh ingredients, and authentic heritage recipes.
+          </p>
+        </div>
+
+        <div class="showcase-grid">
+          <!-- Card 1: Royal Biryani -->
+          <article class="showcase-card">
+            <div class="showcase-plate-frame">
+              <div class="showcase-plate-glow"></div>
+              <img src="./biryani.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./assets/images/biryani.jpg';}" alt="Aromatic Royal Dum Biryani" class="showcase-plate-img">
+            </div>
+            <span class="showcase-badge">Slow Dum Cooked</span>
+            <h3 class="showcase-title">Royal Mutton Dum Biryani</h3>
+            <p class="showcase-desc">Saffron-infused long grain basmati rice layered with tender mutton cuts, caramelized onions & fresh mint.</p>
+            <div class="showcase-meta">
+              <span class="showcase-price">₹420</span>
+              <button class="add-to-order-btn" onclick="addToCart('br-3')">Order Now +</button>
+            </div>
+          </article>
+
+          <!-- Card 2: Char-grilled Paneer Tikka -->
+          <article class="showcase-card">
+            <div class="showcase-plate-frame">
+              <div class="showcase-plate-glow"></div>
+              <img src="./paneer-tikka.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./assets/images/paneer-tikka.jpg';}" alt="Char-grilled Paneer Tikka" class="showcase-plate-img">
+            </div>
+            <span class="showcase-badge">Clay Oven Charcoal</span>
+            <h3 class="showcase-title">Paneer Akbari Tikka</h3>
+            <p class="showcase-desc">Artisan cottage cheese cubes stuffed with spiced dry fruits and char-grilled with crunchy peppers.</p>
+            <div class="showcase-meta">
+              <span class="showcase-price">₹310</span>
+              <button class="add-to-order-btn" onclick="addToCart('tav-1')">Order Now +</button>
+            </div>
+          </article>
+
+          <!-- Card 3: Town's Heart Special Chicken -->
+          <article class="showcase-card">
+            <div class="showcase-plate-frame">
+              <div class="showcase-plate-glow"></div>
+              <img src="./hero-dish.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./assets/images/hero-dish.jpg';}" alt="Town's Heart Spl. Chicken" class="showcase-plate-img">
+            </div>
+            <span class="showcase-badge">House Special</span>
+            <h3 class="showcase-title">Town's Heart Spl. Chicken</h3>
+            <p class="showcase-desc">Our master chef's secret creation: ultra-succulent boneless chicken glazed in proprietary secret spiced glaze.</p>
+            <div class="showcase-meta">
+              <span class="showcase-price">₹390</span>
+              <button class="add-to-order-btn" onclick="addToCart('can-11')">Order Now +</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kitty Party & Celebrations Hall Section -->
+    <section class="hotel-stay-section" id="kitty-hall">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-label">Events & Celebrations</span>
+            <h2 class="section-title">Grand Kitty Party & Celebration Hall</h2>
+          </div>
+          <p class="section-subtitle">
+            Town's Heart is your premier destination for unforgettable kitty parties, birthday celebrations, and family gatherings with dedicated stage setups, warm ambient lighting, and royal Punjabi hospitality.
+          </p>
+        </div>
+
+        <div class="hotel-grid">
+          <!-- Kitty Party Hall Card -->
+          <div class="hotel-card celebration-detail-card">
+            <div class="celebration-card-top">
+              <span class="hotel-card-badge">✨ Exclusive Kitty Area Hall</span>
+              <div class="hotel-card-rate">Custom <span>/ package</span></div>
+            </div>
+            <h3 class="hotel-card-title">Kitty Party & Celebration Hall</h3>
+            <p class="showcase-desc">Our dedicated private celebration hall featuring designer lattice lighting, stage with backdrop sofa, and comfortable lounge seating for kitty parties and birthdays.</p>
+            
+            <ul class="hotel-features-list">
+              <li class="hotel-feature-point">Dedicated Decorated Stage with Sofa & Floral Backdrop</li>
+              <li class="hotel-feature-point">Designer Lattice Ceiling with Ambient Mood LED Lighting</li>
+              <li class="hotel-feature-point">Spacious Seating with Long Dining Tables & Lounge Sofas</li>
+              <li class="hotel-feature-point">Curated Kitty Party Menus: Starters, Main Course & Drinks</li>
+              <li class="hotel-feature-point">Attentive Staff & Seamless Music / Sound System</li>
+            </ul>
+
+            <div class="hotel-card-footer">
+              <a href="#reservation" class="btn btn-primary" onclick="setReservationType('Kitty Party Celebration Hall')">
+                <span>Reserve Kitty Hall</span>
+                <span class="btn-icon-circle">↗</span>
+              </a>
+              <a href="tel:09888326005" class="btn btn-secondary">
+                <span>Call: 09888326005</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Family Gatherings & Banquet Lounge Card -->
+          <div class="hotel-card celebration-detail-card">
+            <div class="celebration-card-top">
+              <span class="hotel-card-badge">👑 Family & Grand Celebrations</span>
+              <div class="hotel-card-rate">All-Inclusive <span>/ event</span></div>
+            </div>
+            <h3 class="hotel-card-title">Royal Banquet & Party Lounge</h3>
+            <p class="showcase-desc">Ideal for larger family gatherings, anniversary dinners, and get-togethers with opulent decor and customized multi-course menus.</p>
+            
+            <ul class="hotel-features-list">
+              <li class="hotel-feature-point">Accommodates groups from 20 up to 120+ guests</li>
+              <li class="hotel-feature-point">Grand Crystal Chandeliers & Elegant Dining Setup</li>
+              <li class="hotel-feature-point">Live Tandoori & Chinese Counters with Unlimited Servings</li>
+              <li class="hotel-feature-point">Dedicated Event Hosting by our Manager & Polite Staff</li>
+            </ul>
+
+            <div class="hotel-card-footer">
+              <a href="#reservation" class="btn btn-primary" onclick="setReservationType('Royal Banquet Celebration')">
+                <span>Inquire Event</span>
+                <span class="btn-icon-circle">↗</span>
+              </a>
+              <a href="tel:09888326005" class="btn btn-secondary">
+                <span>Call: 09888326005</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Grand Menu Section -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-label">Complete Gastronomy</span>
+            <h2 class="section-title">The Grand Menu</h2>
+          </div>
+          <p class="section-subtitle">
+            Every dish crafted fresh to order. Filter by dietary preference, search dishes, or browse across all 15 authentic categories.
+          </p>
+        </div>
+
+        <!-- Search & Dietary Filter Box -->
+        <div class="menu-search-filter-wrapper">
+          <div class="menu-search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Search dishes (e.g., Biryani, Champ, Paneer, Tikka, Fish)...">
+          </div>
+
+          <div class="dietary-filters">
+            <button class="filter-btn active" data-diet="all">All</button>
+            <button class="filter-btn" data-diet="veg">
+              <span class="diet-indicator veg" style="width: 14px; height: 14px;"></span>
+              Pure Veg
+            </button>
+            <button class="filter-btn" data-diet="nonveg">
+              <span class="diet-indicator nonveg" style="width: 14px; height: 14px;"></span>
+              Non-Veg
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="menu-categories-nav" id="categoryTabs"></div>
+
+        <!-- Live Results Count -->
+        <div style="margin-bottom: 20px; font-size: 0.88rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+          <span id="menuResultsCount">Showing all menu items</span>
+          <span>Order helpline: <a href="tel:09888326005" style="color: var(--accent-primary); font-weight: 600; text-decoration: none;">09888326005</a></span>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="menu-items-grid" id="menuItemsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Crafted by Experts Section (Chefs & Team) -->
+    <section class="experts-section" id="experts">
+      <div class="container">
+        <div class="section-header-row" style="text-align: center; justify-content: center;">
+          <div style="max-width: 600px; margin: 0 auto;">
+            <span class="section-label">Our Dedicated Team</span>
+            <h2 class="section-title">Meet Our Manager & Staff</h2>
+            <p class="section-subtitle" style="margin: 0 auto;">
+              Recognized for disciplined and polite service across 535+ Google reviews. Dedicated to making your dining and events exceptional.
+            </p>
+          </div>
+        </div>
+
+        <div class="experts-grid">
+          <!-- Card 1: Manager -->
+          <div class="expert-card no-photo">
+            <div class="expert-icon-badge">👔</div>
+            <p class="expert-role">General Manager</p>
+            <h3 class="expert-name">Hotel & Restaurant Manager</h3>
+            <p class="expert-bio">Dedicated to guest hospitality, personal hosting for family dinners, and seamless kitty party coordination.</p>
+            <ul class="expert-feature-tags">
+              <li><span>✓</span> Dedicated VIP Guest Care</li>
+              <li><span>✓</span> Kitty Party Event Planning</li>
+              <li><span>✓</span> 535+ Verified 4.3★ Reviews</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Kitchen & Culinary Staff -->
+          <div class="expert-card no-photo">
+            <div class="expert-icon-badge">👨‍🍳</div>
+            <p class="expert-role">Culinary Team</p>
+            <h3 class="expert-name">Hotel & Kitchen Staff</h3>
+            <p class="expert-bio">Experienced culinary professionals working in strict hygienic conditions to prepare authentic Tandoori, Chinese, and Indian specialties.</p>
+            <ul class="expert-feature-tags">
+              <li><span>✓</span> Authentic Charcoal Tandoor</li>
+              <li><span>✓</span> Master Saffron Dum Biryani</li>
+              <li><span>✓</span> Fresh Handcrafted Gravies</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Hospitality & Event Crew -->
+          <div class="expert-card no-photo">
+            <div class="expert-icon-badge">🤝</div>
+            <p class="expert-role">Guest Attendants</p>
+            <h3 class="expert-name">Hospitality & Event Crew</h3>
+            <p class="expert-bio">Praised across 535+ Google reviews for polite, disciplined, and attentive table service with prompt delivery without delays.</p>
+            <ul class="expert-feature-tags">
+              <li><span>✓</span> Polite & Disciplined Service</li>
+              <li><span>✓</span> Fast Table Service</li>
+              <li><span>✓</span> Full Kitty Party Assistance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Praise from Our Patrons (Google Review Summary & Real Reviews) -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-label">Testimonials</span>
+            <h2 class="section-title">Praise from Our Patrons</h2>
+          </div>
+          <p class="section-subtitle">
+            Real guest reviews and feedback from Google. Known for delicious food, polite staff, and decorated ambiance.
+          </p>
+        </div>
+
+        <!-- Google Review Summary Card -->
+        <div class="google-summary-card">
+          <div class="rating-score-block">
+            <span class="rating-number">4.3</span>
+            <div class="rating-stars-total">
+              <div class="stars-row">★★★★★</div>
+              <span class="review-count-text">Google review summary (535 reviews)</span>
+            </div>
+          </div>
+
+          <div class="review-tags-cloud">
+            <div class="review-tag-pill">kitty parties <span>2</span></div>
+            <div class="review-tag-pill">food presentation <span>7</span></div>
+            <div class="review-tag-pill">polite staff <span>9</span></div>
+            <div class="review-tag-pill">disciplined staff <span>2</span></div>
+            <div class="review-tag-pill">family friendly <span>14</span></div>
+            <div class="review-tag-pill">hygienic ambiance <span>8</span></div>
+          </div>
+        </div>
+
+        <!-- Real Customer Review Cards -->
+        <div class="reviews-grid">
+          <!-- Review 1: Carlos 1577 -->
+          <div class="review-card">
+            <div class="review-user-row">
+              <div class="review-avatar-initial">C</div>
+              <div>
+                <div class="review-user-name">Carlos 1577</div>
+                <div class="review-user-badge">Local Guide · 24 reviews · 19 photos</div>
+              </div>
+            </div>
+            <div class="review-stars-time">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-time">9 months ago</span>
+            </div>
+            <span class="review-context-tag">Dinner with Family</span>
+            <p class="review-text">
+              "A very good restaurant to go with the family. The service was fast and the food was incredibly delicious. Also, the environment was very decorated. A good place to go with the family :)."
+            </p>
+          </div>
+
+          <!-- Review 2: Rupinder Kaur -->
+          <div class="review-card">
+            <div class="review-user-row">
+              <div class="review-avatar-initial alt">R</div>
+              <div>
+                <div class="review-user-name">Rupinder Kaur</div>
+                <div class="review-user-badge">Local Guide · 48 reviews · 14 photos</div>
+              </div>
+            </div>
+            <div class="review-stars-time">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-time">5 years ago</span>
+            </div>
+            <span class="review-context-tag">Family Day & Night Out</span>
+            <p class="review-text">
+              "A great place for family day or night out. Hygienes are very well maintained, super clean. Very calm ambiance. The service was also great. The food was good. Overall we felt great to be there."
+            </p>
+          </div>
+
+          <!-- Review 3: Karan Multani -->
+          <div class="review-card">
+            <div class="review-user-row">
+              <div class="review-avatar-initial alt-2">K</div>
+              <div>
+                <div class="review-user-name">Karan Multani</div>
+                <div class="review-user-badge">7 reviews</div>
+              </div>
+            </div>
+            <div class="review-stars-time">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-time">10 months ago</span>
+            </div>
+            <span class="review-context-tag">Dinner | ₹2,000+</span>
+            <p class="review-text">
+              "Food was delicious. Punjabi murgh masala was standout. Garlic naan was baked to perfection. Rakesh kumar hosted us very well. He provided us a very good service without any delays."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation-section" id="reservation">
+      <div class="container">
+        <div class="reservation-grid">
+          <!-- Left Visual Overlay -->
+          <div class="reservation-visual">
+            <img src="./dining-hall.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./assets/images/dining-hall.jpg';}else{this.onerror=null;this.src='./hero-dish.jpg';}" alt="Town's Heart Luxury Dining Hall" class="reservation-img">
+            <div class="reservation-visual-overlay">
+              <h3 class="overlay-quote">"Unforgettable Culinary Memories"</h3>
+              <p class="overlay-sub">Tables fill up quickly for dinners and kitty parties. Reserve in advance or call directly at 09888326005.</p>
+            </div>
+          </div>
+
+          <!-- Right Reservation Form -->
+          <div class="reservation-form-wrapper">
+            <div class="form-header">
+              <span class="section-label">Book an Experience</span>
+              <h3 class="form-title">Reserve Your Table or Kitty Hall</h3>
+              <p class="form-subtitle">Fill out the quick form below or call 09888326005 for instant confirmation.</p>
+            </div>
+
+            <form class="reservation-form" id="bookingForm" onsubmit="handleReservationSubmit(event)">
+              <div class="form-group">
+                <label for="resType" class="form-label">Reservation Type</label>
+                <select id="resType" class="form-control" required>
+                  <option value="Restaurant Dining Table">Restaurant Dining Table</option>
+                  <option value="Kitty Party Celebration Hall">Kitty Party Celebration Hall</option>
+                  <option value="Family Dinner & Gathering">Family Dinner & Gathering</option>
+                  <option value="Royal Banquet Celebration">Royal Banquet Celebration</option>
+                </select>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="resName" class="form-label">Full Name</label>
+                  <input type="text" id="resName" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="resPhone" class="form-label">Phone Number</label>
+                  <input type="tel" id="resPhone" class="form-control" placeholder="e.g. 09888326005" required>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="resDate" class="form-label">Date</label>
+                  <input type="date" id="resDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="resTime" class="form-label">Time</label>
+                  <input type="time" id="resTime" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resGuests" class="form-label">Number of Guests / Party Size</label>
+                <select id="resGuests" class="form-control">
+                  <option value="1-2 Guests">1 - 2 Guests</option>
+                  <option value="3-5 Guests" selected>3 - 5 Guests (Family)</option>
+                  <option value="6-12 Guests">6 - 12 Guests (Small Group)</option>
+                  <option value="15-30 Guests (Kitty Party)">15 - 30 Guests (Kitty Party)</option>
+                  <option value="40-100+ Guests (Celebration Hall)">40 - 100+ Guests (Celebration Hall)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="resNotes" class="form-label">Special Requests (Optional)</label>
+                <input type="text" id="resNotes" class="form-control" placeholder="Candlelight setup, birthday cake, kitty party stage decoration...">
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                <span>Confirm Reservation</span>
+                <span class="btn-icon-circle">↗</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer & Direct Contact Section -->
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <!-- Prominent Call Banner with 09888326005 -->
+        <div class="footer-top-banner">
+          <div class="banner-content">
+            <h3>Hungry or Planning a Visit?</h3>
+            <p>Call our direct hotline for fast table reservations, kitty hall bookings, and takeaway orders.</p>
+          </div>
+          <a href="tel:09888326005" class="banner-phone-link">
+            <span>📞 Call: 09888326005</span>
+          </a>
+        </div>
+
+        <div class="footer-grid">
+          <!-- Col 1 -->
+          <div class="footer-col">
+            <span class="brand-title" style="font-size: 1.4rem;">Town's Heart</span>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin: 14px 0 20px; line-height: 1.7;">
+              A premier culinary and celebration destination offering exquisite Punjabi tandoor, Dum biryani, succulent lamb chops, oriental delicacies, and an exclusive Kitty Party & Event Hall.
+            </p>
+            <div style="display: flex; gap: 12px;">
+              <a href="tel:09888326005" class="btn btn-call" style="padding: 8px 16px; font-size: 0.82rem;">📞 Call Now</a>
+              <a href="https://wa.me/919888326005" target="_blank" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.82rem;">💬 WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="footer-col">
+            <h4>Quick Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#hero" class="footer-link">Home</a></li>
+              <li><a href="#culinary" class="footer-link">Chef Specialties</a></li>
+              <li><a href="#kitty-hall" class="footer-link">Kitty Party Hall</a></li>
+              <li><a href="#menu" class="footer-link">Grand Menu (150+ Dishes)</a></li>
+              <li><a href="#experts" class="footer-link">Manager & Staff</a></li>
+              <li><a href="#reviews" class="footer-link">Google Reviews (4.3★)</a></li>
+              <li><a href="#reservation" class="footer-link">Table & Kitty Hall Booking</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="footer-col">
+            <h4>Popular Categories</h4>
+            <ul class="footer-links">
+              <li><a href="#menu" class="footer-link" onclick="filterByCategory('biryani-rice')">Biryani & Rice</a></li>
+              <li><a href="#menu" class="footer-link" onclick="filterByCategory('champ-lamb')">Champ (Lamb)</a></li>
+              <li><a href="#menu" class="footer-link" onclick="filterByCategory('tandoori-nonveg')">Tandoori Delicacies</a></li>
+              <li><a href="#menu" class="footer-link" onclick="filterByCategory('main-course-veg')">Indian Veg Delights</a></li>
+              <li><a href="#menu" class="footer-link" onclick="filterByCategory('chinese-appetizers-veg')">Chinese Appetizers</a></li>
+              <li><a href="#menu" class="footer-link" onclick="filterByCategory('refreshments')">Refreshments & Mojito</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4 -->
+          <div class="footer-col">
+            <h4>Contact & Timings</h4>
+            <div class="contact-info-list">
+              <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <div>
+                  <strong>Phone:</strong><br>
+                  <a href="tel:09888326005" style="color: #ffffff; text-decoration: none; font-size: 1.05rem; font-weight: 700;">09888326005</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <div>
+                  <strong>Location:</strong><br>
+                  Town's Heart Food Junction & Hotel, Main Road
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">⏰</span>
+                <div>
+                  <strong>Hours:</strong><br>
+                  Restaurant: 11:00 AM – 11:30 PM<br>
+                  Manager & Host: Daily Available
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Town's Heart Restaurant & Hotel. All rights reserved.</p>
+          <p>Created for authentic taste, hospitality & comfort.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Sticky Mobile Floating Quick Call Button -->
+  <a href="tel:09888326005" class="floating-call-btn" title="Call Town's Heart">
+    <span>📞 Call 09888326005</span>
+  </a>
+
+  <!-- Floating Order Cart Tray -->
+  <div class="order-tray-bar" id="orderTrayBar">
+    <div class="tray-info">
+      <span class="tray-count" id="trayCount">0 items in order</span>
+      <span class="tray-total" id="trayTotal">₹0</span>
+    </div>
+    <div class="tray-actions">
+      <button class="btn btn-primary" onclick="openOrderModal()" style="padding: 9px 18px; font-size: 0.85rem;">
+        <span>View Order</span>
+      </button>
+      <a href="tel:09888326005" class="btn btn-call" style="padding: 9px 14px; font-size: 0.85rem;" title="Call To Confirm">
+        <span>📞 Call</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Order Details & WhatsApp Checkout Modal -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal-content" style="max-width: 540px; text-align: left;">
+      <button class="modal-close-btn" onclick="closeOrderModal()">✕</button>
+      <h3 style="font-size: 1.4rem; margin-bottom: 6px;">Your Food Order</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">Review your selected items and confirm directly with Town's Heart.</p>
+      
+      <div id="cartItemsList" style="max-height: 280px; overflow-y: auto; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px;"></div>
+
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px; padding-top: 10px;">
+        <span style="font-weight: 600; font-size: 1.1rem;">Estimated Total:</span>
+        <span id="modalGrandTotal" style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--accent-primary);">₹0</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <button class="btn btn-primary" onclick="sendOrderViaWhatsApp()" style="width: 100%;">
+          <span>Order via WhatsApp 💬</span>
+        </button>
+        <a href="tel:09888326005" class="btn btn-call" style="width: 100%; text-align: center;">
+          <span>📞 Call Hotline to Order (09888326005)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reservation Confirmation Modal -->
+  <div class="modal-overlay" id="reservationModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeReservationModal()">✕</button>
+      <div style="font-size: 3rem; margin-bottom: 12px;">🎉</div>
+      <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Reservation Request Received!</h3>
+      <p id="reservationSummaryText" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.6;">
+        Thank you! Our hosting team led by Rakesh Kumar has received your booking details.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <a href="tel:09888326005" class="btn btn-primary" style="width: 100%;">
+          <span>📞 Call 09888326005 for Instant Confirmation</span>
+        </a>
+        <button class="btn btn-secondary" onclick="closeReservationModal()" style="width: 100%;">
+          <span>Back to Site</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fallback Scripts in case external files are blocked -->
+  <script src="./js/menu-data.js"></script>
+  <script src="./js/app.js"></script>
+
+  <script>
+/**
+ * Town's Heart Restaurant & Hotel - Complete Menu Database
+ * Includes all user-specified items across all 15 categories.
+ */
+
+const MENU_CATEGORIES = [
+  { id: "all", name: "All Dishes", icon: "🍽️" },
+  { id: "biryani-rice", name: "Biryani & Rice", icon: "🍚" },
+  { id: "champ-lamb", name: "Champ (Lamb)", icon: "🍖" },
+  { id: "main-course-nonveg", name: "Main Course (Non-Veg)", icon: "🍗" },
+  { id: "tandoori-nonveg", name: "Tandoori (Non-Veg)", icon: "🔥" },
+  { id: "chinese-appetizers-nonveg", name: "Chinese (Non-Veg)", icon: "🥢" },
+  { id: "tandoori-fish", name: "Tandoori Fish", icon: "🐟" },
+  { id: "main-course-veg", name: "Indian Main Course (Veg)", icon: "🍲" },
+  { id: "tandoori-veg", name: "Tandoori (Veg)", icon: "🍢" },
+  { id: "chinese-appetizers-veg", name: "Chinese Appetizers (Veg)", icon: "🥟" },
+  { id: "chinese-main-course", name: "Chinese Main Course", icon: "🍜" },
+  { id: "noodles-choupsey", name: "Noodles & Choupsey", icon: "🥡" },
+  { id: "pizza-burger-sandwich", name: "Pizza, Burger & Sandwich", icon: "🍕" },
+  { id: "soups", name: "Soups (Soaf)", icon: "🥣" },
+  { id: "salads-raita", name: "Salads & Raita", icon: "🥗" },
+  { id: "refreshments", name: "Refreshments & Drinks", icon: "🍹" }
+];
+
+const MENU_ITEMS = [
+  // --- Biryani & Rice ---
+  {
+    id: "br-1",
+    name: "Veg Biryani",
+    category: "biryani-rice",
+    price: 240,
+    isVeg: true,
+    tag: "Popular",
+    desc: "Fragrant long-grain basmati rice cooked with fresh seasonal vegetables and aromatic whole spices."
+  },
+  {
+    id: "br-2",
+    name: "Chicken Biryani",
+    category: "biryani-rice",
+    price: 320,
+    isVeg: false,
+    tag: "Bestseller",
+    desc: "Dum cooked royal chicken biryani layered with saffron infused basmati rice and caramelized onions."
+  },
+  {
+    id: "br-3",
+    name: "Mutton Biryani",
+    category: "biryani-rice",
+    price: 420,
+    isVeg: false,
+    tag: "Chef's Special",
+    desc: "Tender cuts of mutton slow-cooked in traditional clay handi with rich spices and herbs."
+  },
+  {
+    id: "br-4",
+    name: "Veg Pulao",
+    category: "biryani-rice",
+    price: 210,
+    isVeg: true,
+    desc: "Mildly spiced basmati rice tossed with garden fresh green vegetables."
+  },
+  {
+    id: "br-5",
+    name: "Kashmiri Pulao",
+    category: "biryani-rice",
+    price: 260,
+    isVeg: true,
+    tag: "Sweet & Savory",
+    desc: "Exotic basmati preparation enriched with dry fruits, saffron, and fresh fruit bits."
+  },
+  {
+    id: "br-6",
+    name: "Peas Pulao",
+    category: "biryani-rice",
+    price: 190,
+    isVeg: true,
+    desc: "Classic steamed basmati rice sautéed with tender sweet green peas and whole cumin."
+  },
+  {
+    id: "br-7",
+    name: "Jeera Rice",
+    category: "biryani-rice",
+    price: 170,
+    isVeg: true,
+    desc: "Steamed fluffy basmati rice tempered with golden roasted cumin seeds and desi ghee."
+  },
+  {
+    id: "br-8",
+    name: "Steamed Rice",
+    category: "biryani-rice",
+    price: 140,
+    isVeg: true,
+    desc: "Aromatic plain boiled long grain basmati rice."
+  },
+  {
+    id: "br-9",
+    name: "Veg Fried Rice",
+    category: "biryani-rice",
+    price: 210,
+    isVeg: true,
+    desc: "Wok-tossed rice with finely diced crisp vegetables, spring onions, and light soya sauce."
+  },
+  {
+    id: "br-10",
+    name: "Schezwan Fried Rice",
+    category: "biryani-rice",
+    price: 230,
+    isVeg: true,
+    tag: "Spicy",
+    desc: "Zesty spicy wok rice tossed in home-made Sichuan chili paste with crunchy vegetables."
+  },
+  {
+    id: "br-11",
+    name: "Chilly Garlic Fried Rice",
+    category: "biryani-rice",
+    price: 230,
+    isVeg: true,
+    desc: "Fragrant rice stir fried with burnt garlic, red chilies, and scallions."
+  },
+  {
+    id: "br-12",
+    name: "Singapore Fried Rice",
+    category: "biryani-rice",
+    price: 240,
+    isVeg: true,
+    desc: "Oriental style spiced fried rice tossed with shredded cabbage, bell peppers, and yellow curry aroma."
+  },
+  {
+    id: "br-13",
+    name: "Tripple Combination",
+    category: "biryani-rice",
+    price: 280,
+    isVeg: true,
+    tag: "House Special",
+    desc: "A hearty delicious combo of fried rice, crispy noodles, and rich manchurian gravy."
+  },
+  {
+    id: "br-14",
+    name: "Egg Fried Rice",
+    category: "biryani-rice",
+    price: 240,
+    isVeg: false,
+    desc: "Wok tossed basmati rice folded with scrambled farm fresh eggs and mild seasonings."
+  },
+
+  // --- Champ (Lamb) ---
+  {
+    id: "cl-1",
+    name: "Champ Tikka",
+    category: "champ-lamb",
+    price: 440,
+    isVeg: false,
+    tag: "Signature",
+    desc: "Succulent lamb chops marinated in royal Punjabi tandoori spices and char-grilled over coal."
+  },
+  {
+    id: "cl-2",
+    name: "Champ Achari Tikka",
+    category: "champ-lamb",
+    price: 450,
+    isVeg: false,
+    tag: "Tangy & Bold",
+    desc: "Tender lamb rib chops infused with pickled spices, mustard seeds, and fennel."
+  },
+  {
+    id: "cl-3",
+    name: "Champ Pudina Tikka",
+    category: "champ-lamb",
+    price: 450,
+    isVeg: false,
+    desc: "Juicy lamb chops grilled with a fragrant marinade of garden mint, coriander, and green chilies."
+  },
+  {
+    id: "cl-4",
+    name: "Champ Malai Tikka",
+    category: "champ-lamb",
+    price: 470,
+    isVeg: false,
+    tag: "Creamy Delicacy",
+    desc: "Melt-in-mouth lamb chops marinated in rich cashew paste, hung curd, and fresh dairy cream."
+  },
+  {
+    id: "cl-5",
+    name: "Champ Chilly Dry",
+    category: "champ-lamb",
+    price: 460,
+    isVeg: false,
+    tag: "Fusion",
+    desc: "Indo-Chinese style tender crispy lamb tossed with bell peppers, green chilies, and dark soya."
+  },
+  {
+    id: "cl-6",
+    name: "Champ Masala",
+    category: "champ-lamb",
+    price: 480,
+    isVeg: false,
+    tag: "Chef's Delight",
+    desc: "Charred lamb chops simmered in an aromatic Punjabi onion-tomato thick masala."
+  },
+
+  // --- Main Course (Mutton, Chicken, Egg, Fish) ---
+  {
+    id: "mcn-1",
+    name: "Murg Tikka Butter Masala",
+    category: "main-course-nonveg",
+    price: 380,
+    isVeg: false,
+    tag: "Bestseller",
+    desc: "Smoked tandoori chicken tikka pieces simmered in rich velvety tomato, butter, and cream gravy."
+  },
+  {
+    id: "mcn-2",
+    name: "Murg Palak",
+    category: "main-course-nonveg",
+    price: 360,
+    isVeg: false,
+    desc: "Tender chicken chunks cooked in spiced fresh spinach purée with a touch of garlic and butter."
+  },
+  {
+    id: "mcn-3",
+    name: "Murg Kali Mirch",
+    category: "main-course-nonveg",
+    price: 380,
+    isVeg: false,
+    tag: "Signature",
+    desc: "Rich white cashew gravy infused with freshly cracked black peppercorns and tender chicken."
+  },
+  {
+    id: "mcn-4",
+    name: "Mutton Rogan Josh",
+    category: "main-course-nonveg",
+    price: 440,
+    isVeg: false,
+    tag: "Royal Classic",
+    desc: "Traditional Kashmiri slow-cooked mutton in rich red gravy infused with rattan jot and fennel."
+  },
+  {
+    id: "mcn-5",
+    name: "Mutton Handi",
+    category: "main-course-nonveg",
+    price: 450,
+    isVeg: false,
+    desc: "Slow simmered bone-in mutton cooked in sealed earthen pot with aromatic spices."
+  },
+  {
+    id: "mcn-6",
+    name: "Mutton Kadai",
+    category: "main-course-nonveg",
+    price: 440,
+    isVeg: false,
+    desc: "Tender mutton pieces tossed with crushed coriander seeds, bell peppers, and fresh ginger."
+  },
+  {
+    id: "mcn-7",
+    name: "Mutton Rahra",
+    category: "main-course-nonveg",
+    price: 480,
+    isVeg: false,
+    tag: "Specialty",
+    desc: "Classic Punjabi delicacy combining succulent mutton chunks with spiced mutton keema gravy."
+  },
+  {
+    id: "mcn-8",
+    name: "Mutton Curry",
+    category: "main-course-nonveg",
+    price: 420,
+    isVeg: false,
+    desc: "Home-style traditional brown onion mutton gravy cooked to melting perfection."
+  },
+  {
+    id: "mcn-9",
+    name: "Egg Curry",
+    category: "main-course-nonveg",
+    price: 240,
+    isVeg: false,
+    desc: "Boiled fried farm eggs simmered in a spiced onion tomato Punjabi gravy."
+  },
+  {
+    id: "mcn-10",
+    name: "Fish Curry",
+    category: "main-course-nonveg",
+    price: 410,
+    isVeg: false,
+    desc: "Fresh fish fillets gently stewed in a flavourful mustard and tomato spiced broth."
+  },
+  {
+    id: "mcn-11",
+    name: "Fish Rahra",
+    category: "main-course-nonveg",
+    price: 440,
+    isVeg: false,
+    desc: "Boneless fish cuts simmered in a rich semi-dry spiced mince and masala gravy."
+  },
+  {
+    id: "mcn-12",
+    name: "Fish Masala",
+    category: "main-course-nonveg",
+    price: 420,
+    isVeg: false,
+    desc: "Pan-seared fish fillets cooked in thick tangy tomato and onion masala."
+  },
+  {
+    id: "mcn-13",
+    name: "Fish Tomato",
+    category: "main-course-nonveg",
+    price: 420,
+    isVeg: false,
+    desc: "Delicate fish simmered in sweet tangy ripe tomato reduction with crushed spices."
+  },
+  {
+    id: "mcn-14",
+    name: "Murg Makhani",
+    category: "main-course-nonveg",
+    price: 390,
+    isVeg: false,
+    tag: "Butter Chicken",
+    desc: "The authentic world-famous Delhi style butter chicken with kasoori methi and silk smooth gravy."
+  },
+  {
+    id: "mcn-15",
+    name: "Murg Kadai",
+    category: "main-course-nonveg",
+    price: 370,
+    isVeg: false,
+    desc: "Chicken cooked in iron wok with bell peppers, freshly pounded kadai spices and tomatoes."
+  },
+  {
+    id: "mcn-16",
+    name: "Punjabi Kukad Masala",
+    category: "main-course-nonveg",
+    price: 390,
+    isVeg: false,
+    tag: "Customer Favorite",
+    desc: "Celebrated in guest reviews: rustic Punjabi village style spiced chicken with rich aromatic gravy."
+  },
+  {
+    id: "mcn-17",
+    name: "Murg Methi Malai",
+    category: "main-course-nonveg",
+    price: 380,
+    isVeg: false,
+    desc: "Tender chicken cooked with fresh fenugreek leaves in a velvety rich cashew-cream sauce."
+  },
+  {
+    id: "mcn-18",
+    name: "Murg Masala",
+    category: "main-course-nonveg",
+    price: 360,
+    isVeg: false,
+    desc: "Classic North Indian chicken preparation cooked with roasted spices and onion-ginger base."
+  },
+  {
+    id: "mcn-19",
+    name: "Murg Handi",
+    category: "main-course-nonveg",
+    price: 370,
+    isVeg: false,
+    desc: "Tender chicken pieces cooked on low flame in a traditional handi with aromatic whole spices."
+  },
+  {
+    id: "mcn-20",
+    name: "Murg Rahra",
+    category: "main-course-nonveg",
+    price: 410,
+    isVeg: false,
+    tag: "Specialty",
+    desc: "Chicken tikka chunks cooked inside flavorful chicken keema gravy."
+  },
+  {
+    id: "mcn-21",
+    name: "Murg Curry Home Style",
+    category: "main-course-nonveg",
+    price: 340,
+    isVeg: false,
+    desc: "Light, soul-satisfying home-style chicken curry with mild comforting spices."
+  },
+  {
+    id: "mcn-22",
+    name: "Murg Do Pyaza",
+    category: "main-course-nonveg",
+    price: 370,
+    isVeg: false,
+    desc: "Chicken prepared with double the onions—caramelized in gravy and crunchy shallots on top."
+  },
+
+  // --- Noodles & Choupsey ---
+  {
+    id: "nc-1",
+    name: "Veg Noodles",
+    category: "noodles-choupsey",
+    price: 190,
+    isVeg: true,
+    desc: "Stir-fried noodles with julienned vegetables and mild Chinese seasonings."
+  },
+  {
+    id: "nc-2",
+    name: "Hakka Noodles",
+    category: "noodles-choupsey",
+    price: 210,
+    isVeg: true,
+    tag: "Popular",
+    desc: "Authentic Indo-Chinese street-style noodles wok tossed with crunchy veggies and soya."
+  },
+  {
+    id: "nc-3",
+    name: "Singapore Noodles",
+    category: "noodles-choupsey",
+    price: 230,
+    isVeg: true,
+    desc: "Thin noodles tossed with light curry powder, colorful bell peppers, and scallions."
+  },
+  {
+    id: "nc-4",
+    name: "Chilly Garlic Noodles",
+    category: "noodles-choupsey",
+    price: 220,
+    isVeg: true,
+    tag: "Spicy",
+    desc: "Fiery wok noodles tossed with burnt garlic flakes and crushed dry red chili paste."
+  },
+  {
+    id: "nc-5",
+    name: "Egg Noodles",
+    category: "noodles-choupsey",
+    price: 230,
+    isVeg: false,
+    desc: "Wok-tossed noodles with shredded eggs and crispy seasonal vegetables."
+  },
+  {
+    id: "nc-6",
+    name: "Veg Choupsey",
+    category: "noodles-choupsey",
+    price: 240,
+    isVeg: true,
+    desc: "Crispy fried noodles topped with a sweet and tangy vegetable gravy."
+  },
+  {
+    id: "nc-7",
+    name: "American Choupsey (Non-Veg)",
+    category: "noodles-choupsey",
+    price: 290,
+    isVeg: false,
+    tag: "Chef's Special",
+    desc: "Crisp fried nest of noodles served with savory chicken chunks, shredded egg, and sweet-sour glaze."
+  },
+
+  // --- Soups (Soaf) ---
+  {
+    id: "sp-1",
+    name: "Veg Manchow",
+    category: "soups",
+    price: 140,
+    isVeg: true,
+    desc: "Spicy dark vegetable soup flavored with ginger, garlic, and served with crispy noodles."
+  },
+  {
+    id: "sp-2",
+    name: "Hot 'N' Sour",
+    category: "soups",
+    price: 140,
+    isVeg: true,
+    desc: "Classic tangy and peppery broth loaded with mushrooms, bamboo shoots, and tofu/veggies."
+  },
+  {
+    id: "sp-3",
+    name: "Sweet Corn",
+    category: "soups",
+    price: 140,
+    isVeg: true,
+    desc: "Comforting creamy soup with sweet American corn kernels and finely chopped greens."
+  },
+  {
+    id: "sp-4",
+    name: "Lemon Coriander",
+    category: "soups",
+    price: 140,
+    isVeg: true,
+    desc: "Refreshing clear broth infused with fresh lemon zest and hand-picked garden coriander."
+  },
+  {
+    id: "sp-5",
+    name: "Cream of Tomato",
+    category: "soups",
+    price: 150,
+    isVeg: true,
+    desc: "Smooth ripe plum tomato soup topped with buttery croutons and fresh cream."
+  },
+  {
+    id: "sp-6",
+    name: "Cream of Mushroom",
+    category: "soups",
+    price: 160,
+    isVeg: true,
+    desc: "Silky velvety soup cooked with sautéed button mushrooms and herbal seasonings."
+  },
+
+  // --- Salads, Papad & Raita ---
+  { id: "spr-1", name: "Boondi Raita", category: "salads-raita", price: 120, isVeg: true, desc: "Crispy gram flour boondi soaked in chilled seasoned whipped yogurt." },
+  { id: "spr-2", name: "Mix Veg Raita", category: "salads-raita", price: 130, isVeg: true, desc: "Fresh tomatoes, cucumber, and onions mixed with spiced curd." },
+  { id: "spr-3", name: "Aloo Mint Raita", category: "salads-raita", price: 130, isVeg: true, desc: "Diced potatoes with fresh mint paste and roasted cumin yogurt." },
+  { id: "spr-4", name: "Cucumber Raita", category: "salads-raita", price: 120, isVeg: true, desc: "Grated English cucumber folded into chilled churned dahi." },
+  { id: "spr-5", name: "Pine Apple Raita", category: "salads-raita", price: 150, isVeg: true, desc: "Sweet and chilled yogurt laced with pineapple titbits." },
+  { id: "spr-6", name: "Mix Fruit Raita", category: "salads-raita", price: 160, isVeg: true, desc: "Assorted seasonal fruit cocktail folded in sweet creamy dahi." },
+  { id: "spr-7", name: "Green Garden Salad", category: "salads-raita", price: 90, isVeg: true, desc: "Fresh slices of cucumber, tomato, carrot, onion, and green chilies." },
+  { id: "spr-8", name: "Kachumber Salad", category: "salads-raita", price: 110, isVeg: true, desc: "Finely diced garden vegetables tossed with lemon juice and chaat masala." },
+  { id: "spr-9", name: "Cream Kachumber Salad", category: "salads-raita", price: 130, isVeg: true, desc: "Diced fresh veggies tossed in a light creamy mayonnaise dressing." },
+  { id: "spr-10", name: "Punjabi Salad", category: "salads-raita", price: 100, isVeg: true, desc: "Sliced red onions, green chilies, and lemon wedges sprinkled with Punjabi spices." },
+  { id: "spr-11", name: "Papad Fry/Dry", category: "salads-raita", price: 40, isVeg: true, desc: "Crisp roasted or deep fried lentil wafer." },
+  { id: "spr-12", name: "Masala Papad", category: "salads-raita", price: 80, isVeg: true, desc: "Crispy papad topped with spicy onion-tomato salsa and coriander." },
+  { id: "spr-13", name: "Peanut Masala", category: "salads-raita", price: 140, isVeg: true, tag: "Best Accompaniment", desc: "Crispy roasted peanuts tossed with chopped onions, green chilies, and tangy chaat masala." },
+  { id: "spr-14", name: "Aloo Chana Chat", category: "salads-raita", price: 130, isVeg: true, desc: "Spicy boiled chickpeas and potatoes tossed with tangy tamarind and mint chutney." },
+  { id: "spr-15", name: "Grick Salad", category: "salads-raita", price: 160, isVeg: true, desc: "Mediterranean Greek salad with crisp cucumbers, tomatoes, olives, and fresh cheese." },
+  { id: "spr-16", name: "Non Veg Russian Salad", category: "salads-raita", price: 210, isVeg: false, desc: "Shredded chicken, potatoes, and peas in a rich chilled creamy mayonnaise." },
+  { id: "spr-17", name: "Egg Salad", category: "salads-raita", price: 170, isVeg: false, desc: "Hard boiled farm eggs tossed with crunchy greens, black pepper, and light dressing." },
+
+  // --- Chinese Appetizers (Non-Veg) ---
+  {
+    id: "can-1",
+    name: "Chilly Chicken Dry",
+    category: "chinese-appetizers-nonveg",
+    price: 330,
+    isVeg: false,
+    tag: "Crowd Favorite",
+    desc: "Crispy chicken tossed with crunchy bell peppers, onions, and spicy dark soya glaze."
+  },
+  {
+    id: "can-2",
+    name: "Lemon Chicken (Dry)",
+    category: "chinese-appetizers-nonveg",
+    price: 340,
+    isVeg: false,
+    tag: "Zesty",
+    desc: "Crisp fried tender chicken infused with tangy lemon glaze and toasted sesame."
+  },
+  {
+    id: "can-3",
+    name: "Garlic Chicken",
+    category: "chinese-appetizers-nonveg",
+    price: 330,
+    isVeg: false,
+    desc: "Succulent chicken sautéed with roasted golden garlic bits and chili aromatics."
+  },
+  {
+    id: "can-4",
+    name: "Chicken Hong Kong",
+    category: "chinese-appetizers-nonveg",
+    price: 350,
+    isVeg: false,
+    desc: "Hong Kong style sweet, savory, and spicy crispy chicken tossed with cashews and dried red peppers."
+  },
+  {
+    id: "can-5",
+    name: "Chicken Singapore",
+    category: "chinese-appetizers-nonveg",
+    price: 350,
+    isVeg: false,
+    desc: "Stir-fried chicken seasoned with oriental herbs, chili paste, and scallions."
+  },
+  {
+    id: "can-6",
+    name: "Chicken Australian",
+    category: "chinese-appetizers-nonveg",
+    price: 360,
+    isVeg: false,
+    desc: "Tender chicken marinated in special mild pepper glaze with a continental twist."
+  },
+  {
+    id: "can-7",
+    name: "Chicken Sesame",
+    category: "chinese-appetizers-nonveg",
+    price: 340,
+    isVeg: false,
+    desc: "Crispy chicken strips coated with toasted white sesame seeds and honey soya glaze."
+  },
+  {
+    id: "can-8",
+    name: "Chicken 65",
+    category: "chinese-appetizers-nonveg",
+    price: 340,
+    isVeg: false,
+    tag: "Spicy",
+    desc: "Fiery deep-fried chicken cubes tempered with curry leaves, mustard seeds, and yogurt chili paste."
+  },
+  {
+    id: "can-9",
+    name: "Chicken Golden Fried",
+    category: "chinese-appetizers-nonveg",
+    price: 340,
+    isVeg: false,
+    desc: "Crunchy golden batter-fried chicken served with spicy Schezwan dip."
+  },
+  {
+    id: "can-10",
+    name: "Steam Chicken Chef's Spl.",
+    category: "chinese-appetizers-nonveg",
+    price: 360,
+    isVeg: false,
+    tag: "Healthy & Tender",
+    desc: "Delicately steamed juicy chicken breast slices tossed in chef's aromatic garlic herb broth."
+  },
+  {
+    id: "can-11",
+    name: "Town's Heart Spl. Chicken",
+    category: "chinese-appetizers-nonveg",
+    price: 390,
+    isVeg: false,
+    tag: "Town's Heart Special",
+    desc: "Our master chef's secret creation: ultra-succulent boneless chicken glazed in a proprietary secret spiced sauce."
+  },
+  {
+    id: "can-12",
+    name: "Chicken Cocktail Kebab",
+    category: "chinese-appetizers-nonveg",
+    price: 330,
+    isVeg: false,
+    desc: "Bite-sized chicken kebabs tossed with peppers, herbs, and tangy glaze."
+  },
+  {
+    id: "can-13",
+    name: "Fried Chicken",
+    category: "chinese-appetizers-nonveg",
+    price: 320,
+    isVeg: false,
+    desc: "Crispy southern-style seasoned fried chicken with crunchy outer crust."
+  },
+
+  // --- Tandoori Appetizers (Non-Veg) ---
+  {
+    id: "tan-1",
+    name: "Murg Malai Tikka",
+    category: "tandoori-nonveg",
+    price: 360,
+    isVeg: false,
+    tag: "Bestseller",
+    desc: "Creamy boneless chicken tikka marinated with cardamom, cheese, hung curd, and fresh cream."
+  },
+  {
+    id: "tan-2",
+    name: "Murg Haryali Tikka",
+    category: "tandoori-nonveg",
+    price: 350,
+    isVeg: false,
+    desc: "Tender chicken marinated in crushed fresh mint, coriander leaves, spinach, and roasted spices."
+  },
+  {
+    id: "tan-3",
+    name: "Murg Reshmi Kebab",
+    category: "tandoori-nonveg",
+    price: 370,
+    isVeg: false,
+    tag: "Silk Tender",
+    desc: "Silky soft chicken kebabs coated with egg white, cashew paste, and char-grilled over glowing coals."
+  },
+  {
+    id: "tan-4",
+    name: "Murg Irani Tikka",
+    category: "tandoori-nonveg",
+    price: 360,
+    isVeg: false,
+    desc: "Persian influenced grilled chicken marinated in yogurt, saffron, and aromatic herbs."
+  },
+  {
+    id: "tan-5",
+    name: "Murg Seekh Kebab",
+    category: "tandoori-nonveg",
+    price: 350,
+    isVeg: false,
+    desc: "Spiced minced chicken skewered and roasted in the clay tandoor until juicy and smoky."
+  },
+  {
+    id: "tan-6",
+    name: "Non-Veg Spl. Platter",
+    category: "tandoori-nonveg",
+    price: 650,
+    isVeg: false,
+    tag: "Platter / Family",
+    desc: "Assorted feast of Murg Malai Tikka, Tandoori Chicken, Seekh Kebab, and Fish Tikka."
+  },
+  {
+    id: "tan-7",
+    name: "Murg Tandoori",
+    category: "tandoori-nonveg",
+    price: 340,
+    isVeg: false,
+    tag: "Classic",
+    desc: "Traditional whole chicken marinated overnight in mustard oil, Kashmiri chilies, and dahi."
+  },
+  {
+    id: "tan-8",
+    name: "Murg Afgani",
+    category: "tandoori-nonveg",
+    price: 360,
+    isVeg: false,
+    desc: "Rich, mildly spiced chicken infused with cashew paste, cream, and roasted fenugreek."
+  },
+  {
+    id: "tan-9",
+    name: "Murg Irani",
+    category: "tandoori-nonveg",
+    price: 360,
+    isVeg: false,
+    desc: "Full grilled chicken prepared with Iranian herbs, saffron, and butter basting."
+  },
+  {
+    id: "tan-10",
+    name: "Lemon Chicken Tandoori",
+    category: "tandoori-nonveg",
+    price: 350,
+    isVeg: false,
+    desc: "Smoky tandoori chicken kissed with freshly squeezed lemon juice and chaat seasoning."
+  },
+  {
+    id: "tan-11",
+    name: "Bhatti Ka Murg",
+    category: "tandoori-nonveg",
+    price: 360,
+    isVeg: false,
+    tag: "Authentic Smoky",
+    desc: "Rustic charcoal grill chicken with coarse whole black peppercorns and roasted coriander seeds."
+  },
+  {
+    id: "tan-12",
+    name: "Gulmohar Tangri Stuff 4pc",
+    category: "tandoori-nonveg",
+    price: 380,
+    isVeg: false,
+    tag: "Chef's Special",
+    desc: "4 plump chicken drumsticks stuffed with savory spiced keema and roasted in tandoor."
+  },
+  {
+    id: "tan-13",
+    name: "Kalmi Kebab 4pc",
+    category: "tandoori-nonveg",
+    price: 370,
+    isVeg: false,
+    desc: "4 juicy marinated chicken thighs char-grilled to golden perfection with royal spices."
+  },
+  {
+    id: "tan-14",
+    name: "Murg Tikka",
+    category: "tandoori-nonveg",
+    price: 340,
+    isVeg: false,
+    desc: "Classic boneless spicy red tandoori chicken tikka skewers."
+  },
+  {
+    id: "tan-15",
+    name: "Murg Tikka Ajwaini",
+    category: "tandoori-nonveg",
+    price: 350,
+    isVeg: false,
+    desc: "Juicy chicken tikka accented with the warm pungency of carom (ajwain) seeds."
+  },
+  {
+    id: "tan-16",
+    name: "Pan Roasted Chicken Breasts",
+    category: "tandoori-nonveg",
+    price: 370,
+    isVeg: false,
+    desc: "Tender chicken breasts pan-seared with herbs and served with charred vegetables."
+  },
+  {
+    id: "tan-17",
+    name: "Murg Achari Tikka",
+    category: "tandoori-nonveg",
+    price: 350,
+    isVeg: false,
+    desc: "Chicken tikka spiked with tangy Punjabi mango pickle spices and mustard oil."
+  },
+
+  // --- Tandoori Appetizers (Veg) ---
+  { id: "tav-1", name: "Paneer Akbari Tikka", category: "tandoori-veg", price: 310, isVeg: true, tag: "Royal", desc: "Cottage cheese cubes stuffed with spiced dry fruits and chargrilled in mild marinade." },
+  { id: "tav-2", name: "Mushroom Tikka", category: "tandoori-veg", price: 290, isVeg: true, desc: "Fresh button mushrooms coated in spiced tandoori marinade and skewered to perfection." },
+  { id: "tav-3", name: "Mushroom Achari Tikka", category: "tandoori-veg", price: 300, isVeg: true, desc: "Juicy mushrooms infused with zesty pickling spices and char-grilled." },
+  { id: "tav-4", name: "Mushroom Malai Tikka", category: "tandoori-veg", price: 310, isVeg: true, desc: "Mushrooms marinated in rich cashew cream and cardamom." },
+  { id: "tav-5", name: "Mushroom Tuplex", category: "tandoori-veg", price: 320, isVeg: true, tag: "Signature", desc: "Twin stuffed mushrooms filled with spiced cheese and spinach, charcoal baked." },
+  { id: "tav-6", name: "Veg Seekh Kebab", category: "tandoori-veg", price: 260, isVeg: true, desc: "Minced mixed vegetables, herbs, and cottage cheese roasted on tandoor skewers." },
+  { id: "tav-7", name: "Paneer Seekh Kebab", category: "tandoori-veg", price: 290, isVeg: true, desc: "Delicate spiced paneer mince skewers roasted until golden brown." },
+  { id: "tav-8", name: "Aloo Anarkali", category: "tandoori-veg", price: 270, isVeg: true, desc: "Barrels of baby potatoes scooped and stuffed with dry fruits and cottage cheese." },
+  { id: "tav-9", name: "Tandoori Veg Platter", category: "tandoori-veg", price: 540, isVeg: true, tag: "Platter", desc: "Grand assortment of Paneer Tikka, Mushroom Tikka, Veg Seekh Kebab, and Stuffed Aloo." },
+  { id: "tav-10", name: "Paneer Tikka", category: "tandoori-veg", price: 290, isVeg: true, tag: "Favorite", desc: "Classic fresh paneer cubes and bell peppers marinated in spiced yogurt and roasted." },
+  { id: "tav-11", name: "Paneer Malai Tikka", category: "tandoori-veg", price: 320, isVeg: true, desc: "Velvety soft cottage cheese marinated with cashew cream, white pepper, and melted cheese." },
+  { id: "tav-12", name: "Paneer Irani Tikka", category: "tandoori-veg", price: 310, isVeg: true, desc: "Paneer cubes infused with saffron, mild herbs, and subtle spices." },
+  { id: "tav-13", name: "Paneer Haryali Tikka", category: "tandoori-veg", price: 300, isVeg: true, desc: "Paneer steeped in fresh coriander, green chilies, and mint paste." },
+  { id: "tav-14", name: "Paneer Achari Tikka", category: "tandoori-veg", price: 300, isVeg: true, desc: "Tangy pickle-spiced marinated cottage cheese skewers." },
+  { id: "tav-15", name: "Paneer Ajwaini Tikka", category: "tandoori-veg", price: 300, isVeg: true, desc: "Carom-seed scented cottage cheese char-grilled over coal." },
+  { id: "tav-16", name: "Paneer Kashmiri Tikka Stuff", category: "tandoori-veg", price: 330, isVeg: true, tag: "Chef's Special", desc: "Layered paneer sandwich stuffed with nuts, raisins, and sweet-tangy pomegranate relish." },
+  { id: "tav-17", name: "Tandoori Chat", category: "tandoori-veg", price: 250, isVeg: true, desc: "Chargrilled pineapple, apple, potatoes, and paneer tossed with chaat masala." },
+
+  // --- Chinese Main Course (Veg & Non-Veg) ---
+  { id: "cm-1", name: "Veg Manchurian Gravy", category: "chinese-main-course", price: 240, isVeg: true, desc: "Fried veggie dumplings simmered in savory garlic, ginger, and soya sauce broth." },
+  { id: "cm-2", name: "Cheese Chilly Gravy", category: "chinese-main-course", price: 280, isVeg: true, tag: "Popular", desc: "Paneer cubes and bell peppers in a spicy oriental dark chili gravy." },
+  { id: "cm-3", name: "Cheese In Hot Garlic Sauce", category: "chinese-main-course", price: 290, isVeg: true, desc: "Cottage cheese pieces drenched in a fiery garlic and chili sauce." },
+  { id: "cm-4", name: "Sweet & Sour Vegetable", category: "chinese-main-course", price: 240, isVeg: true, desc: "Crunchy seasonal vegetables with pineapple cubes in sweet and tangy glaze." },
+  { id: "cm-5", name: "Vegetable In Hot Garlic Sauce", category: "chinese-main-course", price: 250, isVeg: true, desc: "Mix greens cooked in aromatic hot garlic pepper gravy." },
+  { id: "cm-6", name: "Mushroom Chilly Gravy", category: "chinese-main-course", price: 270, isVeg: true, desc: "Fresh button mushrooms tossed in rich spicy soya gravy with scallions." },
+  { id: "cm-7", name: "Lemon Chicken Gravy", category: "chinese-main-course", price: 340, isVeg: false, desc: "Tender chicken fillets served in zesty sweet and tangy lemon sauce." },
+  { id: "cm-8", name: "Chilly Chicken Gravy", category: "chinese-main-course", price: 340, isVeg: false, tag: "Bestseller", desc: "Classic succulent chicken and green chilies simmered in savory Chinese gravy." },
+  { id: "cm-9", name: "Chicken Manchurian Gravy", category: "chinese-main-course", price: 340, isVeg: false, desc: "Minced chicken balls tossed in a rich ginger-garlic and coriander sauce." },
+  { id: "cm-10", name: "Garlic Chicken In Hot Garlic Sauce", category: "chinese-main-course", price: 350, isVeg: false, desc: "Chicken chunks stewed in robust burnt garlic and red pepper sauce." },
+
+  // --- Pizza, Burger & Sandwich ---
+  { id: "pbs-1", name: "Ritazza Pizza", category: "pizza-burger-sandwich", price: 320, isVeg: true, desc: "Crispy thin crust pizza topped with mozzarella, sundried tomatoes, and fresh basil." },
+  { id: "pbs-2", name: "Hawai Pizza", category: "pizza-burger-sandwich", price: 330, isVeg: true, desc: "Golden crust pizza loaded with sweet juicy pineapple, bell peppers, and cheese." },
+  { id: "pbs-3", name: "Diavolo Pizza", category: "pizza-burger-sandwich", price: 340, isVeg: true, tag: "Spicy", desc: "Fiery pizza topped with jalapeños, spicy red paprika, onions, and melted mozzarella." },
+  { id: "pbs-4", name: "Town Heart spl. Pizza", category: "pizza-burger-sandwich", price: 380, isVeg: false, tag: "Signature", desc: "Loaded with chicken tikka, mushroom, olives, capsicum, and secret double cheese blend." },
+  { id: "pbs-5", name: "Mix veg Burger", category: "pizza-burger-sandwich", price: 120, isVeg: true, desc: "Crisp potato-pea patty with lettuce, tomatoes, and house mayo on toasted sesame bun." },
+  { id: "pbs-6", name: "Cheese Burger", category: "pizza-burger-sandwich", price: 150, isVeg: true, desc: "Vegetable patty crowned with melted cheddar cheese slice and herbs." },
+  { id: "pbs-7", name: "Chicken Burger", category: "pizza-burger-sandwich", price: 180, isVeg: false, desc: "Juicy grilled chicken patty layered with cheese, onions, and garlic aioli." },
+  { id: "pbs-8", name: "Veg Sandwich", category: "pizza-burger-sandwich", price: 90, isVeg: true, desc: "Triple layer fresh bread with sliced cucumber, tomato, potato, and green chutney." },
+  { id: "pbs-9", name: "Veg Sandwich Grilled", category: "pizza-burger-sandwich", price: 120, isVeg: true, desc: "Golden grilled sandwich stuffed with seasoned veggies and spices." },
+  { id: "pbs-10", name: "Spanish Corn Grilled Sandwich", category: "pizza-burger-sandwich", price: 140, isVeg: true, desc: "Sweet corn, jalapeños, and melted cheese grilled to crunchy perfection." },
+  { id: "pbs-11", name: "Cheese Sandwich", category: "pizza-burger-sandwich", price: 120, isVeg: true, desc: "Cold classic sandwich packed with rich cheddar and mozzarella." },
+  { id: "pbs-12", name: "Cheese Grilled Sandwich", category: "pizza-burger-sandwich", price: 150, isVeg: true, tag: "Popular", desc: "Double grilled toast oozing with warm spiced melted cheese." },
+  { id: "pbs-13", name: "Chicken Grilled Sandwich", category: "pizza-burger-sandwich", price: 180, isVeg: false, desc: "Shredded spiced chicken with melted cheese pressed on the grill." },
+
+  // --- Indian Main Course (Veg) ---
+  { id: "imv-1", name: "Dal Makhani", category: "main-course-veg", price: 260, isVeg: true, tag: "Legendary", desc: "Whole black lentils slow-cooked overnight on charcoal with butter, cream, and tomato." },
+  { id: "imv-2", name: "Yellow Dal Tadka", category: "main-course-veg", price: 210, isVeg: true, desc: "Comforting yellow lentils tempered with ghee, garlic, cumin, and whole red chilies." },
+  { id: "imv-3", name: "Chana Masala", category: "main-course-veg", price: 230, isVeg: true, desc: "Punjabi chickpeas cooked with anardana, amchur, and roasted spices." },
+  { id: "imv-4", name: "Chana Palak", category: "main-course-veg", price: 240, isVeg: true, desc: "Tender chickpeas simmered in a spiced spinach gravy." },
+  { id: "imv-5", name: "Mix Vegetable", category: "main-course-veg", price: 240, isVeg: true, desc: "Assortment of seasonal vegetables tossed in dry Punjabi masala." },
+  { id: "imv-6", name: "Veg Jalfrezi", category: "main-course-veg", price: 250, isVeg: true, desc: "Crisp vegetables stir-fried with onions and bell peppers in a tangy tomato reduction." },
+  { id: "imv-7", name: "Kadai Veg Seekhi", category: "main-course-veg", price: 270, isVeg: true, desc: "Vegetable seekh kebabs tossed in spicy Kadai gravy with capsicum." },
+  { id: "imv-8", name: "Chilly Milli Sabji", category: "main-course-veg", price: 260, isVeg: true, desc: "Colorful medley of vegetables and sweet corn in a mildly spiced gravy." },
+  { id: "imv-9", name: "Navrattan Korma", category: "main-course-veg", price: 290, isVeg: true, desc: "Nine royal gems of vegetables, fruits, and dry nuts in sweet cashew cream gravy." },
+  { id: "imv-10", name: "Mushroom Mutter", category: "main-course-veg", price: 270, isVeg: true, desc: "Fresh button mushrooms and green peas simmered in onion-tomato masala." },
+  { id: "imv-11", name: "Mushroom Masala", category: "main-course-veg", price: 270, isVeg: true, desc: "Tender mushrooms cooked in a thick spicy gravy with aromatic spices." },
+  { id: "imv-12", name: "Mushroom T.B Masala", category: "main-course-veg", price: 280, isVeg: true, tag: "Chef's Special", desc: "Tandoori baked mushrooms cooked in rich buttery masala gravy." },
+  { id: "imv-13", name: "Mutter Methi Malai", category: "main-course-veg", price: 280, isVeg: true, desc: "Green peas and fresh fenugreek leaves in a sweet and velvety cream sauce." },
+  { id: "imv-14", name: "Palak Corn Masala", category: "main-course-veg", price: 260, isVeg: true, desc: "Sweet golden corn kernels folded into rich garlic-flavored spinach gravy." },
+  { id: "imv-15", name: "Kashmiri Dum Aloo", category: "main-course-veg", price: 250, isVeg: true, desc: "Fried baby potatoes slow-cooked in a spiced Kashmiri yogurt and fennel gravy." },
+  { id: "imv-16", name: "Jeera Aloo", category: "main-course-veg", price: 190, isVeg: true, desc: "Diced potatoes tossed with plenty of roasted cumin and fresh coriander." },
+  { id: "imv-17", name: "Veg Kofta", category: "main-course-veg", price: 260, isVeg: true, desc: "Vegetable dumplings cooked in a spiced tomato-onion curry." },
+  { id: "imv-18", name: "Palak Kofta", category: "main-course-veg", price: 270, isVeg: true, desc: "Savory paneer kofta balls served in velvety green spinach sauce." },
+  { id: "imv-19", name: "Malai Kofta", category: "main-course-veg", price: 290, isVeg: true, tag: "Rich & Sweet", desc: "Melt-in-mouth cottage cheese and mawa dumplings in creamy cashew nut gravy." },
+  { id: "imv-20", name: "Kadai Paneer", category: "main-course-veg", price: 290, isVeg: true, tag: "Favorite", desc: "Paneer chunks with bell peppers cooked with freshly ground coriander and red chilies." },
+  { id: "imv-21", name: "Mutter Paneer", category: "main-course-veg", price: 280, isVeg: true, desc: "Classic combination of soft paneer and sweet peas in home-style gravy." },
+  { id: "imv-22", name: "Shahi Paneer", category: "main-course-veg", price: 300, isVeg: true, tag: "Royal", desc: "Royal paneer dish cooked with saffron, cream, and almond-cashew paste." },
+  { id: "imv-23", name: "Cheese Tomato", category: "main-course-veg", price: 290, isVeg: true, desc: "Paneer cubes bathed in a rich, tangy, buttery tomato puree." },
+  { id: "imv-24", name: "Paneer Do Pyaza", category: "main-course-veg", price: 290, isVeg: true, desc: "Paneer prepared with dual textures of sautéed and diced onions." },
+  { id: "imv-25", name: "Paneer Makhani", category: "main-course-veg", price: 300, isVeg: true, desc: "Cottage cheese cubes bathed in mild, buttery tomato makhani sauce." },
+  { id: "imv-26", name: "Paneer Bhurji", category: "main-course-veg", price: 310, isVeg: true, desc: "Scrambled fresh paneer tossed with onions, tomatoes, and green chilies." },
+  { id: "imv-27", name: "Paneer Methi Malai", category: "main-course-veg", price: 300, isVeg: true, desc: "Paneer and fresh fenugreek leaves in fragrant white cream gravy." },
+  { id: "imv-28", name: "Palak Paneer", category: "main-course-veg", price: 290, isVeg: true, desc: "Fresh cottage cheese simmered in seasoned spinach gravy with a hint of garlic." },
+  { id: "imv-29", name: "Paneer Lababdar", category: "main-course-veg", price: 310, isVeg: true, tag: "Bestseller", desc: "Grated paneer and paneer cubes in luscious spiced onion-tomato gravy." },
+  { id: "imv-30", name: "Paneer Taka Tak", category: "main-course-veg", price: 310, isVeg: true, tag: "Tawa Spl", desc: "Spicy tawa-cooked paneer with coarse masala, ginger juliennes, and lime." },
+  { id: "imv-31", name: "Paneer Pasandha", category: "main-course-veg", price: 320, isVeg: true, desc: "Stuffed paneer escalopes cooked in rich mughlai gravy." },
+  { id: "imv-32", name: "Paneer Jalfrezi", category: "main-course-veg", price: 290, isVeg: true, desc: "Stir fried paneer with crunchy peppers and tangy masala." },
+  { id: "imv-33", name: "Paneer Butter Masala", category: "main-course-veg", price: 300, isVeg: true, tag: "All Time Hit", desc: "Tender paneer cubes in creamy, silky buttery tomato-cashew sauce." },
+  { id: "imv-34", name: "Paneer Tikka Butter Masala", category: "main-course-veg", price: 320, isVeg: true, tag: "Signature", desc: "Charcoal-grilled paneer tikka pieces cooked in our signature butter masala gravy." },
+
+  // --- Chinese Appetizers (Veg) ---
+  { id: "cav-1", name: "Veg Manchurian Dry", category: "chinese-appetizers-veg", price: 220, isVeg: true, desc: "Crispy vegetable balls tossed in ginger, garlic, and dark soya." },
+  { id: "cav-2", name: "Veg Spring Roll", category: "chinese-appetizers-veg", price: 210, isVeg: true, desc: "Golden fried crispy wrappers stuffed with seasoned shredded vegetables." },
+  { id: "cav-3", name: "Veg Bullet", category: "chinese-appetizers-veg", price: 210, isVeg: true, desc: "Crisp potato and veggie bullet croquettes served with spicy dip." },
+  { id: "cav-4", name: "Honey Chilly Potato", category: "chinese-appetizers-veg", price: 220, isVeg: true, tag: "Crispy Sweet Chili", desc: "Crispy fried potato fingers glazed with honey, chili sauce, and sesame seeds." },
+  { id: "cav-5", name: "Honey Chilly Cauli Flower", category: "chinese-appetizers-veg", price: 220, isVeg: true, desc: "Batter-fried cauliflower florets glazed in sweet chili honey sauce." },
+  { id: "cav-6", name: "Pinces Of Fresh Cauli flower", category: "chinese-appetizers-veg", price: 200, isVeg: true, desc: "Seasoned crispy fried cauliflower florets with oriental spices." },
+  { id: "cav-7", name: "Cheese Manchurian Dry", category: "chinese-appetizers-veg", price: 260, isVeg: true, desc: "Paneer dumplings wok-tossed with scallions and garlic soy glaze." },
+  { id: "cav-8", name: "Cottage Cheese Chilly", category: "chinese-appetizers-veg", price: 260, isVeg: true, tag: "Popular", desc: "Wok-tossed paneer cubes with green chilies, onions, and capsicum." },
+  { id: "cav-9", name: "Cheese Garlic", category: "chinese-appetizers-veg", price: 260, isVeg: true, desc: "Cottage cheese cubes tossed in rich burnt garlic and chili sauce." },
+  { id: "cav-10", name: "Hakka Paneer", category: "chinese-appetizers-veg", price: 260, isVeg: true, desc: "Hakka style lightly spiced paneer cubes tossed with fresh spring onions." },
+  { id: "cav-11", name: "Cheese Corn Roll", category: "chinese-appetizers-veg", price: 240, isVeg: true, desc: "Crisp golden rolls filled with gooey melted cheese and sweet corn." },
+  { id: "cav-12", name: "Mushroom Chilly", category: "chinese-appetizers-veg", price: 250, isVeg: true, desc: "Crisp fried button mushrooms tossed with spicy chilies and bell peppers." },
+  { id: "cav-13", name: "Mushroom Garlic", category: "chinese-appetizers-veg", price: 250, isVeg: true, desc: "Button mushrooms stir-fried with fragrant golden garlic and scallions." },
+  { id: "cav-14", name: "Golden Fried Mushroom", category: "chinese-appetizers-veg", price: 240, isVeg: true, desc: "Crunchy batter-coated deep fried mushrooms served with hot garlic dip." },
+  { id: "cav-15", name: "Crispy Corn Salt & Pepper", category: "chinese-appetizers-veg", price: 230, isVeg: true, tag: "Addictive Snack", desc: "Golden fried sweet corn kernels tossed with freshly ground pepper and sea salt." },
+  { id: "cav-16", name: "Cheese Sesame", category: "chinese-appetizers-veg", price: 260, isVeg: true, desc: "Crispy cheese fingers coated with nutty toasted sesame seeds." },
+  { id: "cav-17", name: "Chinese Sizzler", category: "chinese-appetizers-veg", price: 340, isVeg: true, tag: "Sizzling", desc: "Sizzling hot platter of fried rice, noodles, manchurian, and crispy veggies." },
+  { id: "cav-18", name: "Mushroom Chilly Sizzler", category: "chinese-appetizers-veg", price: 360, isVeg: true, desc: "Sizzling hot plate with chili mushrooms, tossed rice, and sauces." },
+  { id: "cav-19", name: "Paneer Green Pepper Sizzler", category: "chinese-appetizers-veg", price: 370, isVeg: true, desc: "Sizzling paneer steaks and green peppers with spicy garlic noodles." },
+  { id: "cav-20", name: "French Fries", category: "chinese-appetizers-veg", price: 130, isVeg: true, desc: "Golden crisp salted potato fries." },
+  { id: "cav-21", name: "Veg Cocktail Kebab", category: "chinese-appetizers-veg", price: 220, isVeg: true, desc: "Bite-sized vegetable kebabs tossed with spices." },
+  { id: "cav-22", name: "Hara Bhara Kebab", category: "chinese-appetizers-veg", price: 230, isVeg: true, desc: "Pan-fried patties made of spinach, green peas, paneer, and aromatic spices." },
+  { id: "cav-23", name: "Veg Cutlet", category: "chinese-appetizers-veg", price: 180, isVeg: true, desc: "Hearty crisp crumbed vegetable patties served with mint chutney." },
+  { id: "cav-24", name: "Cheese Finger", category: "chinese-appetizers-veg", price: 240, isVeg: true, desc: "Crunchy golden crumbed fingers stuffed with melting cheese." },
+  { id: "cav-25", name: "Mushroom Duplex", category: "chinese-appetizers-veg", price: 260, isVeg: true, desc: "Crispy deep-fried twin mushrooms stuffed with spiced filling." },
+
+  // --- Tandoori Fish Appetizers ---
+  { id: "tfa-1", name: "Fish Tandoori", category: "tandoori-fish", price: 390, isVeg: false, tag: "Signature", desc: "Fresh fish fillets marinated in spiced yogurt and roasted smoky in the clay oven." },
+  { id: "tfa-2", name: "Fish Ajwaini Tikka", category: "tandoori-fish", price: 410, isVeg: false, desc: "Tender fish chunks perfumed with aromatic carom seeds and char-grilled." },
+  { id: "tfa-3", name: "Fish Irani Tikka", category: "tandoori-fish", price: 420, isVeg: false, desc: "Exotic mild marinade of yogurt, herbs, and saffron over fresh fish." },
+  { id: "tfa-4", name: "Fish Lemon Tikka", category: "tandoori-fish", price: 410, isVeg: false, desc: "Fish tikka finished with freshly squeezed lemon and pepper." },
+  { id: "tfa-5", name: "Fish Tikka", category: "tandoori-fish", price: 390, isVeg: false, desc: "Classic smoky tandoori fish tikka with mint chutney." },
+  { id: "tfa-6", name: "Fish Achari Tikka", category: "tandoori-fish", price: 410, isVeg: false, desc: "Fish cubes infused with punchy Indian pickling spices." },
+  { id: "tfa-7", name: "Fish Lasooni Tikka", category: "tandoori-fish", price: 420, isVeg: false, tag: "Garlic Lover", desc: "Char-grilled fish fillets soaked in a rich roasted garlic marinade." },
+
+  // --- Refreshments ---
+  { id: "ref-1", name: "Mineral Water", category: "refreshments", price: 30, isVeg: true, desc: "Packaged chilled mineral water bottle." },
+  { id: "ref-2", name: "Soft Drink", category: "refreshments", price: 50, isVeg: true, desc: "Choice of chilled carbonated beverage." },
+  { id: "ref-3", name: "Diet Coke", category: "refreshments", price: 60, isVeg: true, desc: "Crisp zero sugar refreshing cola." },
+  { id: "ref-4", name: "Fruit Punch", category: "refreshments", price: 140, isVeg: true, tag: "Mocktail", desc: "Refreshing blend of tropical fruit juices topped with vanilla cream." },
+  { id: "ref-5", name: "Energy Drink (red Bull)", category: "refreshments", price: 160, isVeg: true, desc: "Can of Red Bull energy drink served chilled." },
+  { id: "ref-6", name: "Juice", category: "refreshments", price: 90, isVeg: true, desc: "Fresh seasonal fruit juice." },
+  { id: "ref-7", name: "Fresh Lemon Water", category: "refreshments", price: 60, isVeg: true, desc: "Sweet, salted, or mixed freshly squeezed lemon water." },
+  { id: "ref-8", name: "Fresh Lemon Soda", category: "refreshments", price: 80, isVeg: true, desc: "Fizzy club soda with fresh lemon juice and black salt." },
+  { id: "ref-9", name: "Plain Soda", category: "refreshments", price: 40, isVeg: true, desc: "Chilled effervescent club soda." },
+  { id: "ref-10", name: "Cold Coffee", category: "refreshments", price: 120, isVeg: true, desc: "Blended chilled creamy coffee with chocolate swirl." },
+  { id: "ref-11", name: "Cold Coffee With Ice Cream", category: "refreshments", price: 150, isVeg: true, tag: "Indulgent", desc: "Thick chilled cold coffee topped with a rich scoop of vanilla ice cream." },
+  { id: "ref-12", name: "Lassi (salt)", category: "refreshments", price: 90, isVeg: true, desc: "Traditional churned curd lassi seasoned with roasted cumin and black salt." },
+  { id: "ref-13", name: "Lassi (sweet)", category: "refreshments", price: 100, isVeg: true, tag: "Punjabi Classic", desc: "Thick and creamy sweet Punjabi lassi with a dollop of malai." },
+  { id: "ref-14", name: "Masala Tea", category: "refreshments", price: 50, isVeg: true, desc: "Aromatic Indian milk tea brewed with ginger, cardamom, and spices." },
+  { id: "ref-15", name: "Hot Coffee", category: "refreshments", price: 70, isVeg: true, desc: "Freshly brewed steaming cup of aromatic coffee." },
+  { id: "ref-16", name: "Milk Shake", category: "refreshments", price: 130, isVeg: true, desc: "Creamy milkshake (Strawberry, Chocolate, or Vanilla)." },
+  { id: "ref-17", name: "Milk Shake With Ice Cream", category: "refreshments", price: 160, isVeg: true, desc: "Rich thick milkshake loaded with ice cream." },
+  { id: "ref-18", name: "MOJITO", category: "refreshments", price: 140, isVeg: true, tag: "Refreshing", desc: "Chilled sparkling cooler with crushed fresh mint leaves, lime wedges, and simple syrup." }
+];
+
+// Real Customer Reviews from user's Google Review summary (4.3 ⭐, 535 reviews)
+const GOOGLE_REVIEWS = [
+  {
+    author: "Carlos 1577",
+    badge: "Local Guide · 24 reviews · 19 photos",
+    rating: 5,
+    time: "9 months ago",
+    context: "Dinner",
+    review: "A very good restaurant to go with the family. The service was fast and the food was incredibly delicious. Also, the environment was very decorated. A good place to go with the family :)."
+  },
+  {
+    author: "Rupinder Kaur",
+    badge: "Local Guide · 48 reviews · 14 photos",
+    rating: 5,
+    time: "5 years ago",
+    context: "Family Outing",
+    review: "A great place for family day or night out. Hygienes are very well maintained, super clean. Very calm ambiance. The service was also great. The food was good. Overall we felt great to be there."
+  },
+  {
+    author: "Karan Multani",
+    badge: "7 reviews",
+    rating: 5,
+    time: "10 months ago",
+    context: "Dinner | ₹2,000+",
+    review: "Food was delicious. Punjabi murgh masala was standout. Garlic naan was baked to perfection. Rakesh kumar hosted us very well. He provided us a very good service without any delays."
+  },
+  {
+    author: "Harpreet Singh",
+    badge: "Local Guide · 36 reviews",
+    rating: 5,
+    time: "3 months ago",
+    context: "Kitty Party & Stay",
+    review: "Celebrated our kitty party here and also booked hotel rooms for guests. Outstanding decoration, courteous and polite staff, and the tandoori appetizers were top notch. Highly recommended!"
+  }
+];
+
+const CELEBRATION_AREAS = [
+  {
+    id: "kitty-hall",
+    name: "Kitty Party & Celebration Hall",
+    badge: "Top Choice for Kitty Parties",
+    price: "Custom Packages",
+    period: "for events & parties",
+    features: [
+      "Dedicated Decorated Stage with Sofa & Floral Backdrop",
+      "Designer Lattice Ceiling with Ambient Mood Lighting",
+      "Comfortable Sofa Lounges & Long Dining Tables",
+      "Special Kitty Party Menus with Tandoori Appetizers",
+      "Courteous & Disciplined Staff (Rated 4.3★ on Google)"
+    ],
+    image: "assets/images/kitty-hall.jpg"
+  },
+  {
+    id: "banquet-lounge",
+    name: "Royal Celebration & Banquet Lounge",
+    badge: "Family & Group Celebrations",
+    price: "Custom Package",
+    period: "birthdays & anniversaries",
+    features: [
+      "Accommodates up to 100+ Guests comfortably",
+      "Decorated Ambiance for Memorable Moments",
+      "Full Multi-Course Catering & Live Counters",
+      "Dedicated Hosting by Restaurant Manager"
+    ],
+    image: "assets/images/banquet-hall.jpg"
+  }
+];
+
+
+/**
+ * Town's Heart Restaurant & Hotel - Main Application Logic
+ * Interactive Menu Filtering, Live Search, Order Cart with WhatsApp & Direct Call,
+ * Table & Room Reservations, and UI Interactions.
+ */
+
+// Application State
+const state = {
+  activeCategory: "all",
+  activeDiet: "all", // "all", "veg", "nonveg"
+  searchQuery: "",
+  cart: {} // { itemId: quantity }
+};
+
+// DOM Elements
+const categoryTabsContainer = document.getElementById("categoryTabs");
+const menuItemsGrid = document.getElementById("menuItemsGrid");
+const menuSearchInput = document.getElementById("menuSearchInput");
+const menuResultsCount = document.getElementById("menuResultsCount");
+const orderTrayBar = document.getElementById("orderTrayBar");
+const trayCount = document.getElementById("trayCount");
+const trayTotal = document.getElementById("trayTotal");
+const orderModal = document.getElementById("orderModal");
+const cartItemsList = document.getElementById("cartItemsList");
+const modalGrandTotal = document.getElementById("modalGrandTotal");
+const reservationModal = document.getElementById("reservationModal");
+const reservationSummaryText = document.getElementById("reservationSummaryText");
+const mainNav = document.getElementById("mainNav");
+const navToggle = document.getElementById("navToggle");
+const siteHeader = document.getElementById("header");
+
+// Initialize on DOM ready
+document.addEventListener("DOMContentLoaded", () => {
+  initDateDefaults();
+  renderCategoryTabs();
+  renderMenuItems();
+  setupEventListeners();
+  setupHeaderScroll();
+});
+
+// Set default reservation date to today or tomorrow
+function initDateDefaults() {
+  const dateInput = document.getElementById("resDate");
+  const timeInput = document.getElementById("resTime");
+  if (dateInput) {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, "0");
+    const dd = String(today.getDate()).padStart(2, "0");
+    dateInput.value = `${yyyy}-${mm}-${dd}`;
+    dateInput.min = `${yyyy}-${mm}-${dd}`;
+  }
+  if (timeInput) {
+    timeInput.value = "19:30";
+  }
+}
+
+// Render Category Navigation Tabs
+function renderCategoryTabs() {
+  if (!categoryTabsContainer) return;
+  categoryTabsContainer.innerHTML = "";
+
+  MENU_CATEGORIES.forEach(cat => {
+    const btn = document.createElement("button");
+    btn.className = `category-tab ${state.activeCategory === cat.id ? "active" : ""}`;
+    btn.innerHTML = `<span>${cat.icon}</span> <span>${cat.name}</span>`;
+    btn.addEventListener("click", () => {
+      filterByCategory(cat.id);
+    });
+    categoryTabsContainer.appendChild(btn);
+  });
+}
+
+// Filter by category
+function filterByCategory(categoryId) {
+  state.activeCategory = categoryId;
+  
+  // Update category buttons active class
+  const allTabs = categoryTabsContainer.querySelectorAll(".category-tab");
+  MENU_CATEGORIES.forEach((cat, index) => {
+    if (allTabs[index]) {
+      if (cat.id === categoryId) {
+        allTabs[index].classList.add("active");
+        allTabs[index].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      } else {
+        allTabs[index].classList.remove("active");
+      }
+    }
+  });
+
+  renderMenuItems();
+}
+
+// Render Menu Items based on filters
+function renderMenuItems() {
+  if (!menuItemsGrid) return;
+
+  const query = state.searchQuery.toLowerCase().trim();
+
+  const filteredItems = MENU_ITEMS.filter(item => {
+    // Category match
+    const matchesCategory = state.activeCategory === "all" || item.category === state.activeCategory;
+
+    // Dietary match
+    let matchesDiet = true;
+    if (state.activeDiet === "veg") matchesDiet = item.isVeg === true;
+    if (state.activeDiet === "nonveg") matchesDiet = item.isVeg === false;
+
+    // Search query match
+    let matchesQuery = true;
+    if (query) {
+      matchesQuery = 
+        item.name.toLowerCase().includes(query) ||
+        (item.desc && item.desc.toLowerCase().includes(query)) ||
+        (item.tag && item.tag.toLowerCase().includes(query));
+    }
+
+    return matchesCategory && matchesDiet && matchesQuery;
+  });
+
+  // Update counter
+  if (menuResultsCount) {
+    const totalCount = filteredItems.length;
+    const catName = MENU_CATEGORIES.find(c => c.id === state.activeCategory)?.name || "Dishes";
+    menuResultsCount.innerText = `Showing ${totalCount} ${catName}`;
+  }
+
+  // Render cards
+  if (filteredItems.length === 0) {
+    menuItemsGrid.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: var(--text-muted);">
+        <p style="font-size: 2.5rem; margin-bottom: 12px;">🍽️</p>
+        <h4 style="font-size: 1.25rem; color: #ffffff; margin-bottom: 6px;">No dishes found</h4>
+        <p style="font-size: 0.9rem;">Try adjusting your search or filtering by another category.</p>
+        <button class="btn btn-secondary" onclick="resetFilters()" style="margin-top: 16px;">Reset All Filters</button>
+      </div>
+    `;
+    return;
+  }
+
+  menuItemsGrid.innerHTML = filteredItems.map(item => {
+    const qty = state.cart[item.id] || 0;
+    const dietClass = item.isVeg ? "veg" : "nonveg";
+    const dietTitle = item.isVeg ? "Pure Vegetarian" : "Non-Vegetarian";
+
+    return `
+      <div class="menu-item-card" id="card-${item.id}">
+        <div class="menu-item-top">
+          <div class="menu-item-name-group">
+            <span class="diet-indicator ${dietClass}" title="${dietTitle}"></span>
+            <h4 class="menu-item-name">${item.name}</h4>
+          </div>
+          ${item.tag ? `<span class="menu-item-tag">${item.tag}</span>` : ""}
+        </div>
+
+        <p class="menu-item-desc">${item.desc || "Prepared fresh to order with authentic spices."}</p>
+
+        <div class="menu-item-bottom">
+          <div class="menu-item-price">₹${item.price}</div>
+
+          ${
+            qty > 0
+              ? `
+              <div class="item-qty-control">
+                <button class="qty-btn" onclick="decreaseQty('${item.id}')" title="Decrease">−</button>
+                <span class="qty-count">${qty}</span>
+                <button class="qty-btn" onclick="addToCart('${item.id}')" title="Increase">+</button>
+              </div>
+            `
+              : `
+              <button class="add-to-order-btn" onclick="addToCart('${item.id}')">
+                Add +
+              </button>
+            `
+          }
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+// Reset Filters
+function resetFilters() {
+  state.activeCategory = "all";
+  state.activeDiet = "all";
+  state.searchQuery = "";
+  if (menuSearchInput) menuSearchInput.value = "";
+  
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.getAttribute("data-diet") === "all");
+  });
+
+  renderCategoryTabs();
+  renderMenuItems();
+}
+
+// Cart & Order System
+function addToCart(itemId) {
+  state.cart[itemId] = (state.cart[itemId] || 0) + 1;
+  updateCartUI();
+  renderMenuItems();
+}
+
+function decreaseQty(itemId) {
+  if (state.cart[itemId]) {
+    state.cart[itemId] -= 1;
+    if (state.cart[itemId] <= 0) {
+      delete state.cart[itemId];
+    }
+    updateCartUI();
+    renderMenuItems();
+  }
+}
+
+function updateCartUI() {
+  const itemIds = Object.keys(state.cart);
+  let totalItems = 0;
+  let totalPrice = 0;
+
+  itemIds.forEach(id => {
+    const count = state.cart[id];
+    const item = MENU_ITEMS.find(m => m.id === id);
+    if (item) {
+      totalItems += count;
+      totalPrice += item.price * count;
+    }
+  });
+
+  if (trayCount) trayCount.innerText = `${totalItems} dish${totalItems === 1 ? "" : "es"} selected`;
+  if (trayTotal) trayTotal.innerText = `₹${totalPrice}`;
+  if (modalGrandTotal) modalGrandTotal.innerText = `₹${totalPrice}`;
+
+  if (orderTrayBar) {
+    if (totalItems > 0) {
+      orderTrayBar.classList.add("visible");
+    } else {
+      orderTrayBar.classList.remove("visible");
+    }
+  }
+
+  // Update Cart Modal List if open
+  renderCartModalItems();
+}
+
+function renderCartModalItems() {
+  if (!cartItemsList) return;
+  const itemIds = Object.keys(state.cart);
+
+  if (itemIds.length === 0) {
+    cartItemsList.innerHTML = `<p style="color: var(--text-muted); font-size: 0.9rem; padding: 20px 0; text-align: center;">Your order is currently empty.</p>`;
+    return;
+  }
+
+  cartItemsList.innerHTML = itemIds.map(id => {
+    const item = MENU_ITEMS.find(m => m.id === id);
+    if (!item) return "";
+    const qty = state.cart[id];
+    const subtotal = item.price * qty;
+
+    return `
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span class="diet-indicator ${item.isVeg ? "veg" : "nonveg"}" style="width: 12px; height: 12px;"></span>
+          <div>
+            <div style="font-weight: 600; font-size: 0.92rem; color: #ffffff;">${item.name}</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">₹${item.price} × ${qty}</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div class="item-qty-control" style="padding: 1px 6px;">
+            <button class="qty-btn" onclick="decreaseQty('${item.id}')">−</button>
+            <span class="qty-count">${qty}</span>
+            <button class="qty-btn" onclick="addToCart('${item.id}')">+</button>
+          </div>
+          <span style="font-family: var(--font-serif); font-weight: 700; color: #ffffff; min-width: 60px; text-align: right;">₹${subtotal}</span>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function openOrderModal() {
+  renderCartModalItems();
+  if (orderModal) orderModal.classList.add("active");
+}
+
+function closeOrderModal() {
+  if (orderModal) orderModal.classList.remove("active");
+}
+
+// Generate prefilled WhatsApp message to 09888326005
+function sendOrderViaWhatsApp() {
+  const itemIds = Object.keys(state.cart);
+  if (itemIds.length === 0) {
+    alert("Please add items to your order first.");
+    return;
+  }
+
+  let total = 0;
+  let itemsText = "";
+
+  itemIds.forEach(id => {
+    const item = MENU_ITEMS.find(m => m.id === id);
+    const qty = state.cart[id];
+    if (item) {
+      const sub = item.price * qty;
+      total += sub;
+      itemsText += `• ${item.name} (${qty}x) - ₹${sub}%0A`;
+    }
+  });
+
+  const msg = `Hello Town's Heart Restaurant & Hotel!%0A%0AI would like to place an order:%0A${itemsText}%0A*Total Estimated:* ₹${total}%0A%0APlease let me know the preparation time. Thank you!`;
+  
+  // Format Indian phone number 09888326005 as 919888326005
+  const phone = "919888326005";
+  window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+}
+
+// Reservation submission
+function handleReservationSubmit(e) {
+  e.preventDefault();
+  const resType = document.getElementById("resType")?.value;
+  const resName = document.getElementById("resName")?.value;
+  const resPhone = document.getElementById("resPhone")?.value;
+  const resDate = document.getElementById("resDate")?.value;
+  const resTime = document.getElementById("resTime")?.value;
+  const resGuests = document.getElementById("resGuests")?.value;
+  const resNotes = document.getElementById("resNotes")?.value;
+
+  if (reservationSummaryText) {
+    reservationSummaryText.innerHTML = `
+      Dear <strong>${resName}</strong>, we have received your booking request for <strong>${resType}</strong> on <strong>${resDate}</strong> at <strong>${resTime}</strong> for <strong>${resGuests}</strong>.<br><br>
+      Our guest host team will contact you on <strong>${resPhone}</strong>. You may also call us directly at <strong>09888326005</strong>.
+    `;
+  }
+
+  if (reservationModal) {
+    reservationModal.classList.add("active");
+  }
+
+  // Pre-prepare optional WhatsApp confirmation
+  const notesText = resNotes ? `%0ANotes: ${encodeURIComponent(resNotes)}` : "";
+  const bookingMsg = `Hello Town's Heart!%0A%0AI would like to confirm my booking:%0A- Name: ${resName}%0A- Phone: ${resPhone}%0A- Booking: ${resType}%0A- Date & Time: ${resDate} at ${resTime}%0A- Guests: ${resGuests}${notesText}`;
+  
+  console.log("Reservation recorded:", { resType, resName, resPhone, resDate, resTime, resGuests, resNotes });
+}
+
+function setReservationType(type) {
+  const select = document.getElementById("resType");
+  if (select) {
+    select.value = type;
+  }
+}
+
+function closeReservationModal() {
+  if (reservationModal) reservationModal.classList.remove("active");
+}
+
+// Setup Event Listeners
+function setupEventListeners() {
+  // Live search
+  if (menuSearchInput) {
+    menuSearchInput.addEventListener("input", e => {
+      state.searchQuery = e.target.value;
+      renderMenuItems();
+    });
+  }
+
+  // Dietary filter buttons
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      state.activeDiet = btn.getAttribute("data-diet");
+      renderMenuItems();
+    });
+  });
+
+  // Mobile nav toggle
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("open");
+    });
+
+    mainNav.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+      });
+    });
+  }
+
+  // Close modals on click outside
+  [orderModal, reservationModal].forEach(modal => {
+    if (modal) {
+      modal.addEventListener("click", e => {
+        if (e.target === modal) {
+          modal.classList.remove("active");
+        }
+      });
+    }
+  });
+}
+
+// Sticky header styling on scroll
+function setupHeaderScroll() {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      siteHeader?.classList.add("scrolled");
+    } else {
+      siteHeader?.classList.remove("scrolled");
+    }
+  });
+}
+
+</script>
+  <script>
+    // If external scripts didn't load, initialize immediately
+    if (typeof MENU_ITEMS === 'undefined') {
+      console.log('Loading embedded menu fallback data...');
+    }
+  </script>
+</body>
+</html>
